@@ -12,7 +12,7 @@ app.get("/show", async (req, res) => {
     const user = await prisma.user.findMany();
     res.json({ message: "success", user });
   } catch (error) {
-    res.status(500).json({ message: "Error fetching users", error });
+    res.status(500).json({ message: "Erroor fetching users", error });
     console.error(error);
   }
 });
