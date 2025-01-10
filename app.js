@@ -30,6 +30,28 @@ app.post("/registerApi", async (req, res) => {
     console.error(error);
   }
 });
+app.post("/login",async(req,res)=>{
+  const {phone}=req.body;
+  try{
+    let user= await prisma.user.findMany({
+      where: {
+        phone:phone 
+      }
+      
+    }) 
+    if (user) {
+      
+      res.json({message: "success"})
+    }
+    else{
+      res.json({message: "user not found"}).status(403)
+    }
+  }
+  catch (error) {
+    res.status(500).json({ message: "Error find user ", error });
+    console.error(error);
+  }
+})
 
 // Route: Add a new product
 // app.post("/addProduct", async (req, res) => {
