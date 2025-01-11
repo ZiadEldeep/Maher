@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const { prisma } = require("./prisma.js");
-
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -30,62 +29,25 @@ app.post("/registerApi", async (req, res) => {
     console.error(error);
   }
 });
-app.post("/login",async(req,res)=>{
-  const {phone}=req.body;
-  try{
-    let user= await prisma.user.findMany({
+app.post("/login", async (req, res) => {
+  const { phone } = req.body;
+  try {
+    let user = await prisma.user.findMany({
       where: {
-        phone:phone 
-      }
-      
-    }) 
-    console.log(user,"1212");
-    
+        phone: phone,
+      },
+    });
+    console.log(user, "1212");
     if (user[0]) {
-      
-      res.json({message: "success",user:user})
+      res.json({ message: "success", user: user });
+    } else {
+      res.json({ message: "user not found" }).status(403);
     }
-    else{
-      res.json({message: "user not found"}).status(403)
-    }
-  }
-  catch (error) {
+  } catch (error) {
     res.status(500).json({ message: "Error find user ", error });
     console.error(error);
   }
-})
-
-// Route: Add a new product
-// app.post("/addProduct", async (req, res) => {
-//   const { name, description, price } = req.body;
-//   const priceValue = parseFloat(price);
-//   if (isNaN(priceValue)) {
-//     return res.status(400).json({ message: "Invalid price value" });
-//   }
-//   try {
-//     await prisma.product.create({
-//       data: { name, description, price: priceValue },
-//     });
-//     res.json({ message: "success" });
-//   } catch (error) {
-//     res.status(500).json({ message: "Error adding product", error });
-//     console.error(error);
-//   }
-// });
-
-//  Route: Delete a product
-// app.delete("/delete", async (req, res) => {
-//   const { id } = req.body;
-//   try {
-//     await prisma.product.delete({
-//       where: { id: String(id) }, // Cast ID to string for MongoDB
-//     });
-//     res.json({ message: "success" });
-//   } catch (error) {
-//     res.status(500).json({ message: "Error deleting product", error });
-//     console.error(error);
-//   }
-// });
+});
 
 // Start server
 app.listen(3999, () => {
