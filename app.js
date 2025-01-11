@@ -12,7 +12,7 @@ app.get("/show", async (req, res) => {
     const user = await prisma.user.findMany();
     res.json({ message: "success", user });
   } catch (error) {
-    res.status(500).json({ message: "Erroor fetching users", error });
+    res.status(500).json({ message: "Error fetching users", error });
     console.error(error);
   }
 });
@@ -39,9 +39,11 @@ app.post("/login",async(req,res)=>{
       }
       
     }) 
-    if (user) {
+    console.log(user,"1212");
+    
+    if (user[0]) {
       
-      res.json({message: "success"})
+      res.json({message: "success",user:user})
     }
     else{
       res.json({message: "user not found"}).status(403)
