@@ -119,7 +119,7 @@ app.post("/registerApi", async (req, res) => {
       html: `
         <div style="font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; text-align: center; color: #333;">
           <div style="max-width: 600px; margin: 0 auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-            <h2 style="color: #007bff;">Welcome to Our Service</h2>
+            <h2 style="color: #007bff;">Welcome to Maher for Cars Services</h2>
             <p style="font-size: 16px; color: #555;">Thank you for registering. To complete your registration, please use the verification code below:</p>
             <h3 style="font-size: 24px; color: #333; background-color: #f8f9fa; padding: 10px 20px; border-radius: 6px; display: inline-block;">${verificationCode}</h3>
             <p style="font-size: 16px; color: #555; margin-top: 20px;">If you didn't request this, please ignore this email.</p>
