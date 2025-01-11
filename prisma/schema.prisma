@@ -20,3 +20,19 @@ model User {
   email String @unique
   phone String @unique
 }
+
+model Brand {
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  name    String  @unique // e.g., "BMW"
+  models  Model[] @relation("BrandModels") // One-to-many relationship with models
+}
+
+model Model {
+  id                   String  @id @default(auto()) @map("_id") @db.ObjectId
+  brandId              String  @db.ObjectId // Foreign key to Brand
+  brand                Brand   @relation("BrandModels", fields: [brandId], references: [id])
+  modelName            String  // e.g., "Z4"
+  wheelbaseLengthMm    Int     // Wheelbase length in mm
+  frontWheelSizeInches String  // Front wheel size in inches
+  rearWheelSizeInches  String  // Rear wheel size in inches
+}
