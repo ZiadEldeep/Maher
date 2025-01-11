@@ -124,7 +124,7 @@ app.post("/registerApi", async (req, res) => {
             <h3 style="font-size: 24px; color: #333; background-color: #f8f9fa; padding: 10px 20px; border-radius: 6px; display: inline-block;">${verificationCode}</h3>
             <p style="font-size: 16px; color: #555; margin-top: 20px;">If you didn't request this, please ignore this email.</p>
             <hr style="margin-top: 30px; border: 0; border-top: 1px solid #eee;">
-            <p style="font-size: 14px; color: #777;">Kind Regards,<br>Our Team</p>
+            <p style="font-size: 14px; color: #777;">Kind Regards,<br>MAHER Team</p>
           </div>
         </div>
       `,
