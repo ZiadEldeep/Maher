@@ -36,3 +36,16 @@ model Model {
   frontWheelSizeInches String  // Front wheel size in inches
   rearWheelSizeInches  String  // Rear wheel size in inches
 }
+
+// schema.prisma
+model Car {
+  id          String @id @map("_id") @default(auto()) @db.ObjectId
+  brand        String
+  model        String
+  color        String
+  fuelType     String
+  discNumber   Int
+  licensePlate String
+  madeYear     Int
+  kilometers   Int
+}

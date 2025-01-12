@@ -6,6 +6,7 @@ const path = require("path");
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
 const app = express();
+const twilio = require("twilio");
 const dataFilePath = path.join(__dirname, "cars.json");
 app.use(express.json());
 app.use(cors());
@@ -34,7 +35,6 @@ app.get("/getCars", (req, res) => {
   const jsonData = readJSONFile();
   res.json({ message: "success", data: jsonData });
 });
-
 // Route: Get a specific car by ID
 app.get("/getCars/:id", (req, res) => {
   const { id } = req.params;
@@ -56,7 +56,6 @@ app.get("/getCars/:id", (req, res) => {
     res.status(404).json({ message: "Car not found" });
   }
 });
-
 // Route: Get a specific car by brand and model
 app.get("/carBM", (req, res) => {
   const { brand, model } = req.query;  // Get brand and model from query parameters
@@ -76,7 +75,6 @@ app.get("/carBM", (req, res) => {
     res.status(404).json({ message: "Car not found" });
   }
 });
-
 // Route: Show all users from the database
 app.get("/show", async (req, res) => {
   try {
@@ -87,8 +85,6 @@ app.get("/show", async (req, res) => {
     console.error(error);
   }
 });
-
-// Route: Add a new registration
 // Route: Add a new registration
 app.post("/registerApi", async (req, res) => {
   const { name, email, phone } = req.body;
@@ -147,7 +143,6 @@ app.post("/registerApi", async (req, res) => {
     console.error(error);
   }
 });
-
 // Route: Login user
 app.post("/login", async (req, res) => {
   const { phone } = req.body;
@@ -164,6 +159,56 @@ app.post("/login", async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Error finding user", error });
     console.error(error);
+  }
+});
+// Twilio credentials from the environment variables
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = twilio(accountSid, authToken);
+// API Endpoint to send verification code via WhatsApp
+// app.post("/verifiedwhtsp", async (req, res) => {
+//   const { phone } = req.body;
+
+//   // Generate a random 4-digit numeric verification code
+//   const verificationCode = Math.floor(1000 + Math.random() * 9000);
+
+//   try {
+//     // Send the verification code via WhatsApp using Twilio
+//     const message = await client.messages.create({
+//       from: process.env.TWILIO_WHATSAPP_NUMBER, // Your Twilio WhatsApp number
+//       to: `whatsapp:${phone}`, // The recipient's phone number
+//       body: `Your verification code is: ${verificationCode}`,
+//     });
+
+//     // Respond with success message
+//     res.json({ message: "success", verificationCode, whatsappMessageSid: message.sid });
+//   } catch (error) {
+//     res.status(500).json({ message: "Error sending WhatsApp message", error: error.message });
+//     console.error(error);
+//   }
+// });
+app.post('/addCar', async (req, res) => {
+  const { brand, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers } = req.body;
+
+  try {
+    console.log(prisma);  // Log prisma to check if it's available
+    const newCar = await prisma.car.create({
+      data: {
+        brand,
+        model,
+        color,
+        fuelType,
+        discNumber,
+        licensePlate,
+        madeYear,
+        kilometers,
+      },
+    });
+
+    res.json({ message: 'Car added successfully', car: newCar });
+  } catch (error) {
+    console.error('Error creating car:', error);
+    res.status(500).json({ message: 'Error saving car data', error: error.message });
   }
 });
 
