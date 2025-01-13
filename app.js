@@ -87,7 +87,7 @@ app.get("/show", async (req, res) => {
 });
 // Route: Add a new registration
 app.post("/registerApi", async (req, res) => {
-  const { name, email, phone } = req.body;
+  const { name, email, phone} = req.body;
   
   // Generate a random 4-digit numeric verification code
   const verificationCode = Math.floor(1000 + Math.random() * 9000); // This will generate a 4-digit number
@@ -95,7 +95,7 @@ app.post("/registerApi", async (req, res) => {
   try {
     // Step 1: Create the user in the database
     await prisma.user.create({
-      data: { name, email, phone, verificationCode },
+      data: { name, email, phone},
     });
 
     // Step 2: Set up Nodemailer transporter using environment variables
@@ -135,7 +135,7 @@ app.post("/registerApi", async (req, res) => {
   } catch (error) {
     if (error.code === 'EAUTH') {
       res.status(500).json({ message: "SMTP authentication failed", error });
-    } else if (error.code === 'P2002') {
+    } else if (error.message.includes("unique constraint")) {
       res.status(400).json({ message: "User with this email already exists", error });
     } else {
       res.status(500).json({ message: "Error adding registration", error });
@@ -143,7 +143,6 @@ app.post("/registerApi", async (req, res) => {
     console.error(error);
   }
 });
-
 // Route: Login user
 app.post("/login", async (req, res) => {
   const { phone } = req.body;
