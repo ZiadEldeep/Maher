@@ -87,7 +87,7 @@ app.get("/show", async (req, res) => {
 });
 // Route: Add a new registration
 app.post("/registerApi", async (req, res) => {
-  const { name, email, phone } = req.body;
+  const { name, email, phone} = req.body;
   
   // Generate a random 4-digit numeric verification code
   const verificationCode = Math.floor(1000 + Math.random() * 9000); // This will generate a 4-digit number
@@ -95,7 +95,7 @@ app.post("/registerApi", async (req, res) => {
   try {
     // Step 1: Create the user in the database
     await prisma.user.create({
-      data: { name, email, phone },
+      data: { name, email, phone},
     });
 
     // Step 2: Set up Nodemailer transporter using environment variables
@@ -162,9 +162,9 @@ app.post("/login", async (req, res) => {
   }
 });
 // Twilio credentials from the environment variables
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = twilio(accountSid, authToken);
+// const accountSid = process.env.TWILIO_ACCOUNT_SID;
+// const authToken = process.env.TWILIO_AUTH_TOKEN;
+// const client = twilio(accountSid, authToken);
 // API Endpoint to send verification code via WhatsApp
 // app.post("/verifiedwhtsp", async (req, res) => {
 //   const { phone } = req.body;
@@ -209,6 +209,33 @@ app.post('/addCar', async (req, res) => {
   } catch (error) {
     console.error('Error creating car:', error);
     res.status(500).json({ message: 'Error saving car data', error: error.message });
+  }
+});
+app.post("/getVcode", async (req, res) => {
+  const { email, verificationCode } = req.body;
+
+  try {
+    // Validate the inputs
+    if (!email || !verificationCode) {
+      return res.status(400).json({ message: "Email and verification code are required" });
+    }
+
+    // Update the user's verification code in the database
+    const updatedUser = await prisma.user.update({
+      where: { email },
+      data: { verificationCode },
+    });
+
+    // If the user is not found, return 404
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Respond with success
+    res.status(200).json({ message: "Verification code stored successfully", user: updatedUser });
+  } catch (error) {
+    console.error("Error storing verification code:", error);
+    res.status(500).json({ message: "Internal server error", error: error.message });
   }
 });
 
