@@ -7,13 +7,6 @@ datasource db {
   provider = "mongodb"
   url      = "mongodb+srv://ahmed15ayman7ahmed2002:poiuy123poiuy123@maher.bggyo.mongodb.net/maher?retryWrites=true&w=majority&appName=maher"
 }
-model Product {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  name        String
-  description String
-  price       String
-}
-
 model User {
   id               String   @id @default(auto()) @map("_id") @db.ObjectId
   name             String
@@ -49,4 +42,5 @@ model Car {
   licensePlate String
   madeYear     String
   kilometers   String
+  estmara      String
 }

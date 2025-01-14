@@ -634,7 +634,8 @@
       "id": 55
     }
   ]},
-  "Honda": [
+  "Honda": {"image":"./imgs/honda.png",
+  "models":[
     {
       "Model": "Accord",
       "Wheelbase Length (mm)": 2830,
@@ -670,8 +671,9 @@
       "Rear Wheel Size (inches)": "18x8",
       "id": 60
     }
-  ],
-  "Hyundai": [
+  ]},
+  "Hyundai": {"image":"./imgs/hyundai.png",
+  "models":[
     {
       "Model": "Sonata",
       "Wheelbase Length (mm)": 2800,
@@ -707,8 +709,9 @@
       "Rear Wheel Size (inches)": "17x7",
       "id": 65
     }
-  ],
-  "Jaguar": [
+  ]},
+  "Jaguar": {"image":"./imgs/jaguar.png",
+  "models":[
     {
       "Model": "F-Pace",
       "Wheelbase Length (mm)": 2870,
@@ -744,8 +747,9 @@
       "Rear Wheel Size (inches)": "20x10",
       "id": 70
     }
-  ],
-  "Kia": [
+  ]},
+  "Kia": {"image":"./imgs/kia.jpg",
+  "models":[
     {
       "Model": "Sorento",
       "Wheelbase Length (mm)": 2800,
@@ -781,8 +785,9 @@
       "Rear Wheel Size (inches)": "17x7",
       "id": 75
     }
-  ],
-  "Lexus": [
+  ]},
+  "Lexus": {"image":"./imgs/lexus.jpg",
+  "models":[
     {
       "Model": "RX",
       "Wheelbase Length (mm)": 2790,
@@ -818,8 +823,9 @@
       "Rear Wheel Size (inches)": "20x10",
       "id": 80
     }
-  ],
-  "Toyota": [
+  ]},
+  "Toyota": {"image":"./imgs/toyota.png",
+  "models":[
     {
       "Model": "Highlander",
       "Wheelbase Length (mm)": 2850,
@@ -855,8 +861,9 @@
       "Rear Wheel Size (inches)": "17x7",
       "id": 115
     }
-  ],
-  "Subaru": [
+  ]},
+  "Subaru": {"image":"./imgs/subaru.png",
+  "models":[
     {
       "Model": "Outback",
       "Wheelbase Length (mm)": 2730,
@@ -892,8 +899,9 @@
       "Rear Wheel Size (inches)": "16x7",
       "id": 110
     }
-  ],
-  "Rolls-Royce": [
+  ]},
+  "Rolls-Royce": {"image":"./imgs/rolls-royce.jpg",
+  "models":[
     {
       "Model": "Phantom",
       "Wheelbase Length (mm)": 3355,
@@ -929,8 +937,9 @@
       "Rear Wheel Size (inches)": "21x10",
       "id": 105
     }
-  ],
-  "Porsche": [
+  ]},
+  "Porsche": {"image":"./imgs/porsche.png",
+  "models":[
     {
       "Model": "718 Cayman",
       "Wheelbase Length (mm)": 2470,
@@ -966,8 +975,9 @@
       "Rear Wheel Size (inches)": "21x10",
       "id": 100
     }
-  ],
-  "Nissan": [
+  ]},
+  "Nissan": {"image":"./imgs/nissan.png",
+  "models":[
     {
       "Model": "Altima",
       "Wheelbase Length (mm)": 2775,
@@ -1003,8 +1013,9 @@
       "Rear Wheel Size (inches)": "16x7",
       "id": 95
     }
-  ],
-  "Mercedes-Benz": [
+  ]},
+  "Mercedes-Benz": {"image":"./imgs/mercedes-benz.jpg",
+  "models":[
     {
       "Model": "A-Class",
       "Wheelbase Length (mm)": 2720,
@@ -1040,8 +1051,9 @@
       "Rear Wheel Size (inches)": "20x10",
       "id": 90
     }
-  ],
-  "Maserati": [
+  ]},
+  "Maserati": {"image":"./imgs/maserati.png",
+  "models":[
     {
       "Model": "Levante",
       "Wheelbase Length (mm)": 3000,
@@ -1077,9 +1089,10 @@
       "Rear Wheel Size (inches)": "20x10",
       "id": 85
     }
-  ],
+  ]},
 
-  "Volkswagen": [
+  "Volkswagen": {"image":"./imgs/volkswagen.png",
+  "models":[
     {
       "Model": "Golf",
       "Wheelbase Length (mm)": 2630,
@@ -1220,4 +1233,4 @@
       "Rear Wheel Size (inches)": "18x9",
       "id": 135
     }
-]}
+]}}

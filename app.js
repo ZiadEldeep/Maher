@@ -156,18 +156,64 @@ app.post("/registerApi", async (req, res) => {
 // Route: Login user
 app.post("/login", async (req, res) => {
   const { phone } = req.body;
+
+  // Generate a random 4-digit verification code
+  const verificationCode = Math.floor(1000 + Math.random() * 9000);
+
   try {
-    const user = await prisma.user.findMany({
+    // Step 1: Find the user by phone number
+    const user = await prisma.user.findUnique({
       where: { phone },
     });
 
-    if (user.length > 0) {
-      res.status(201).json({ message: "success", user });
+    if (user) {
+      // Step 2: Update the user's verification code in the database
+      await prisma.user.update({
+        where: { phone },
+        data: { verificationCode: `${verificationCode}` },
+      });
+
+      // Step 3: Set up Nodemailer transporter
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.GMAIL_USER,
+          pass: process.env.GMAIL_PASSWORD,
+        },
+      });
+
+      // Step 4: Compose the email with the verification code
+      const mailOptions = {
+        from: process.env.GMAIL_USER,
+        to: user.email, // Send email to the user's registered email
+        subject: 'Verification Code',
+        html: `
+          <div style="font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; text-align: center; color: #333;">
+            <div style="max-width: 600px; margin: 0 auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <h2 style="color: #007bff;">Verification Code</h2>
+              <p style="font-size: 16px; color: #555;">Hello ${user.name},</p>
+              <p style="font-size: 16px; color: #555;">Your verification code is:</p>
+              <h3 style="font-size: 24px; color: #333; background-color: #f8f9fa; padding: 10px 20px; border-radius: 6px; display: inline-block;">${verificationCode}</h3>
+              <p style="font-size: 16px; color: #555; margin-top: 20px;">Please use this code to verify your login. If you didn't request this, please contact our support team immediately.</p>
+              <hr style="margin-top: 30px; border: 0; border-top: 1px solid #eee;">
+              <p style="font-size: 14px; color: #777;">Kind Regards,<br>MAHER Team</p>
+            </div>
+          </div>
+        `,
+      };
+
+      // Step 5: Send the email
+      await transporter.sendMail(mailOptions);
+
+      // Step 6: Respond with success
+      res.status(200).json({ message: "Verification code sent successfully" ,user:user.verificationCode});
     } else {
-      res.status(403).json({ message: "User not found" });
+      // Step 7: Handle case where user is not found
+      res.status(404).json({ message: "User not found" });
     }
   } catch (error) {
-    res.status(500).json({ message: "Error finding user", error });
+    // Step 8: Handle errors
+    res.status(500).json({ message: "Error during login", error });
     console.error(error);
   }
 });
