@@ -18,8 +18,8 @@ model User {
   id               String   @id @default(auto()) @map("_id") @db.ObjectId
   name             String
   email            String   @unique
-  phone            String
-  verificationCode Int?     // Add this field
+  phone            String   @unique
+  verificationCode String
 }
 
 model Brand {

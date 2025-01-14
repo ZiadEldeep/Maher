@@ -95,7 +95,7 @@ app.post("/registerApi", async (req, res) => {
   try {
     // Step 1: Create the user in the database
     await prisma.user.create({
-      data: { name, email, phone},
+      data: { name, email, phone, verificationCode:`${verificationCode}`},
     });
 
     // Step 2: Set up Nodemailer transporter using environment variables
