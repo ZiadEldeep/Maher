@@ -44,3 +44,12 @@ model Car {
   kilometers   String
   estmara      String
 }
+model Fix {
+  id          String   @id  @map("_id") @default(auto()) @db.ObjectId
+  kilometers  String
+  lastFixDate DateTime
+  fix         String
+  rememberMe  String
+  morfaqat    String
+  createdAt   DateTime @default(now())
+}

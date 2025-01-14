@@ -14,6 +14,5 @@ const prisma =
 if (process.env.NODE_ENV !== 'production') {
   globalForPrisma.prisma = prisma;
 }
-
 // Export the Prisma client instance
 module.exports = { prisma };

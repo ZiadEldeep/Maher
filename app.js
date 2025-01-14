@@ -44,7 +44,7 @@ app.get("/getCars/:id", (req, res) => {
 
   // Search for the car across all brands
   for (const brand in jsonData) {
-    foundCar = jsonData[brand].find((car) => car.id === parseInt(id, 10));
+    foundCar = jsonData[brand]["models"].find((car) => car.id === parseInt(id, 10));
     if (foundCar) 
       carBrand = brand;
       break; // Stop searching once the car is found
@@ -65,7 +65,7 @@ app.get("/carBM", (req, res) => {
 
   // Search for the car in the specified brand and model
   if (brand && model && jsonData[brand]) {
-    foundCar = jsonData[brand].find((car) => car.Model.toLowerCase() === model.toLowerCase());
+    foundCar = jsonData[brand]["models"].find((car) => car.Model.toLowerCase() === model.toLowerCase());
   }
 
   // Return the found car or an error message
@@ -94,7 +94,6 @@ app.get("/show", async (req, res) => {
     res.status(500).json({ message: "Error fetching users", error });
   }
 });
-
 // Route: Add a new registration
 app.post("/registerApi", async (req, res) => {
   const { name, email, phone} = req.body;
@@ -204,9 +203,8 @@ app.post("/login", async (req, res) => {
 
       // Step 5: Send the email
       await transporter.sendMail(mailOptions);
-
       // Step 6: Respond with success
-      res.status(200).json({ message: "Verification code sent successfully" ,user:user.verificationCode});
+      res.status(201).json({ message: "Verification code sent successfully" ,user:{...user,verificationCode}});
     } else {
       // Step 7: Handle case where user is not found
       res.status(404).json({ message: "User not found" });
@@ -244,13 +242,14 @@ app.post("/login", async (req, res) => {
 //   }
 // });
 app.post('/addCar', async (req, res) => {
-  const { brand, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers } = req.body;
+  const { brand, id2, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers ,estmara} = req.body;
 
   try {
     console.log(prisma);  // Log prisma to check if it's available
     const newCar = await prisma.car.create({
       data: {
         brand,
+        id2,
         model,
         color,
         fuelType,
@@ -258,6 +257,7 @@ app.post('/addCar', async (req, res) => {
         licensePlate,
         madeYear,
         kilometers,
+        estmara,
       },
     });
 
@@ -267,34 +267,69 @@ app.post('/addCar', async (req, res) => {
     res.status(500).json({ message: 'Error saving car data', error: error.message });
   }
 });
-app.post("/getVcode", async (req, res) => {
-  const { email, verificationCode } = req.body;
+app.post("/fix", async (req, res) => {
+  const { kilometers, lastFixDate, fix, rememberMe, morfaqat } = req.body;
 
   try {
-    // Validate the inputs
-    if (!email || !verificationCode) {
-      return res.status(400).json({ message: "Email and verification code are required" });
+    // Basic validation for required fields
+    if (!kilometers || !lastFixDate || !fix || !morfaqat) {
+      return res.status(400).json({ message: "All fields except 'rememberMe' are required" });
     }
-
-    // Update the user's verification code in the database
-    const updatedUser = await prisma.user.update({
-      where: { email },
-      data: { verificationCode },
+    // Save data to the database
+    const fixEntry = await prisma.fix.create({
+      data: {
+        kilometers,
+        lastFixDate: new Date(lastFixDate),
+        fix,
+        rememberMe, // Handle optional date
+        morfaqat,
+      },
     });
 
-    // If the user is not found, return 404
-    if (!updatedUser) {
-      return res.status(404).json({ message: "User not found" });
+    // Respond with success
+    res.status(201).json({ message: "Fix entry saved successfully", fixEntry });
+  } catch (error) {
+    // Handle database and other errors
+    console.error("Error saving fix entry:", error);
+
+    // Customize error response based on the error type
+    if (error.code === "P2002") {
+      res.status(400).json({ message: "Duplicate entry detected", error });
+    } else {
+      res.status(500).json({ message: "Error saving fix entry", error });
+    }
+  }
+});
+app.delete('/deleteCar/:id', async (req, res) => {
+  const { id } = req.params;
+
+  // Basic Validation: Check if the id is provided and is a number
+ 
+  try {
+    // Check if the car exists before trying to delete
+    const car = await prisma.car.findUnique({
+      where: { id: id },
+    });
+
+    if (!car) {
+      return res.status(404).json({ message: 'Car not found' });
     }
 
+    // Delete the car
+    await prisma.car.delete({
+      where: { id: id },
+    });
+
     // Respond with success
-    res.status(200).json({ message: "Verification code stored successfully", user: updatedUser });
+    res.status(200).json({ message: 'Car deleted successfully' });
+
   } catch (error) {
-    console.error("Error storing verification code:", error);
-    res.status(500).json({ message: "Internal server error", error: error.message });
+    console.error('Error deleting car:', error);
+    res.status(500).json({ message: 'Error deleting car', error: error.message });
   }
 });
 
+// api for get car by user id...
 // Start the server
 const PORT = 3999;
 app.listen(PORT, () => {
