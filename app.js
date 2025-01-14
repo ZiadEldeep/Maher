@@ -78,13 +78,23 @@ app.get("/carBM", (req, res) => {
 // Route: Show all users from the database
 app.get("/show", async (req, res) => {
   try {
+    // Fetch all users from the database
     const users = await prisma.user.findMany();
+
+    // Check if users array is empty
+    if (users.length === 0) {
+      return res.status(404).json({ message: "No users found" });
+    }
+
+    // Return success response with users
     res.json({ message: "success", users });
   } catch (error) {
+    // Log and return error response
+    console.error("Error fetching users:", error);
     res.status(500).json({ message: "Error fetching users", error });
-    console.error(error);
   }
 });
+
 // Route: Add a new registration
 app.post("/registerApi", async (req, res) => {
   const { name, email, phone} = req.body;
