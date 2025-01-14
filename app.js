@@ -152,7 +152,7 @@ app.post("/login", async (req, res) => {
     });
 
     if (user.length > 0) {
-      res.json({ message: "success", user });
+      res.status(201).json({ message: "success", user });
     } else {
       res.status(403).json({ message: "User not found" });
     }
