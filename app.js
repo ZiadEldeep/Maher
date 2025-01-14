@@ -104,7 +104,7 @@ app.post("/registerApi", async (req, res) => {
 
   try {
     // Step 1: Create the user in the database
-    await prisma.user.create({
+   let user= await prisma.user.create({
       data: { name, email, phone, verificationCode:`${verificationCode}`},
     });
 
@@ -140,7 +140,7 @@ app.post("/registerApi", async (req, res) => {
     await transporter.sendMail(mailOptions);
 
     // Step 5: Respond with success message
-    res.status(201).json({ message: "success", verificationCode });
+    res.status(201).json({ message: "success", user });
 
   } catch (error) {
     if (error.code === 'EAUTH') {
