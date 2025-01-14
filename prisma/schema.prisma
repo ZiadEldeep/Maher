@@ -11,7 +11,7 @@ model Product {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   description String
-  price       Float
+  price       String
 }
 
 model User {
@@ -33,7 +33,7 @@ model Model {
   brandId              String  @db.ObjectId // Foreign key to Brand
   brand                Brand   @relation("BrandModels", fields: [brandId], references: [id])
   modelName            String  // e.g., "Z4"
-  wheelbaseLengthMm    Int     // Wheelbase length in mm
+  wheelbaseLengthMm    String     // Wheelbase length in mm
   frontWheelSizeInches String  // Front wheel size in inches
   rearWheelSizeInches  String  // Rear wheel size in inches
 }
@@ -45,8 +45,8 @@ model Car {
   model        String
   color        String
   fuelType     String
-  discNumber   Int
+  discNumber   String
   licensePlate String
-  madeYear     Int
-  kilometers   Int
+  madeYear     String
+  kilometers   String
 }

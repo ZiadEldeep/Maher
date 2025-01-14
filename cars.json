@@ -1,375 +1,603 @@
 {
-  "Bugatti": [
-    {
-      "Model": "Veyron",
-      "Wheelbase Length (mm)": 2600,
-      "Front Wheel Size (inches)": "20x8",
-      "Rear Wheel Size (inches)": "20x8",
-      "id": 1
-    },
-    {
-      "Model": "Chiron",
-      "Wheelbase Length (mm)": 2710,
-      "Front Wheel Size (inches)": "20x8.5",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 2
-    },
-    {
-      "Model": "Divo",
-      "Wheelbase Length (mm)": 2650,
-      "Front Wheel Size (inches)": "20x8.5",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 3
-    },
-    {
-      "Model": "Centodieci",
-      "Wheelbase Length (mm)": 2640,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 4
-    },
-    {
-      "Model": "Bolide",
-      "Wheelbase Length (mm)": 2500,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 5
-    }
-  ],
-  "Acura": [
-    {
-      "Model": "MDX",
-      "Wheelbase Length (mm)": 2800,
-      "Front Wheel Size (inches)": "18x8",
-      "Rear Wheel Size (inches)": "18x9",
-      "id": 6
-    },
-    {
-      "Model": "RDX",
-      "Wheelbase Length (mm)": 2600,
-      "Front Wheel Size (inches)": "18x7.5",
-      "Rear Wheel Size (inches)": "18x7.5",
-      "id": 7
-    },
-    {
-      "Model": "TLX",
-      "Wheelbase Length (mm)": 2800,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 8
-    },
-    {
-      "Model": "ILX",
-      "Wheelbase Length (mm)": 2670,
-      "Front Wheel Size (inches)": "17x7",
-      "Rear Wheel Size (inches)": "17x7",
-      "id": 9
-    },
-    {
-      "Model": "NSX",
-      "Wheelbase Length (mm)": 2600,
-      "Front Wheel Size (inches)": "19x8.5",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 10
-    }
-  ],
-  "Alfa Romeo": [
-    {
-      "Model": "Giulia",
-      "Wheelbase Length (mm)": 2820,
-      "Front Wheel Size (inches)": "18x7.5",
-      "Rear Wheel Size (inches)": "18x8",
-      "id": 11
-    },
-    {
-      "Model": "Stelvio",
-      "Wheelbase Length (mm)": 2890,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 12
-    },
-    {
-      "Model": "4C",
-      "Wheelbase Length (mm)": 2350,
-      "Front Wheel Size (inches)": "17x7.5",
-      "Rear Wheel Size (inches)": "17x7.5",
-      "id": 13
-    },
-    {
-      "Model": "Spider",
-      "Wheelbase Length (mm)": 2420,
-      "Front Wheel Size (inches)": "17x7.5",
-      "Rear Wheel Size (inches)": "17x8",
-      "id": 14
-    },
-    {
-      "Model": "Giulietta",
-      "Wheelbase Length (mm)": 2520,
-      "Front Wheel Size (inches)": "17x7.5",
-      "Rear Wheel Size (inches)": "17x7.5",
-      "id": 15
-    }
-  ],
-  "Aston Martin": [
-    {
-      "Model": "DB11",
-      "Wheelbase Length (mm)": 2850,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 16
-    },
-    {
-      "Model": "Vantage",
-      "Wheelbase Length (mm)": 2710,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 17
-    },
-    {
-      "Model": "Rapide",
-      "Wheelbase Length (mm)": 2890,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 18
-    },
-    {
-      "Model": "Vanquish",
-      "Wheelbase Length (mm)": 2690,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 19
-    },
-    {
-      "Model": "DBS",
-      "Wheelbase Length (mm)": 2800,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 20
-    }
-  ],
-  "Audi": [
-    {
-      "Model": "TT",
-      "Wheelbase Length (mm)": 2500,
-      "Front Wheel Size (inches)": "18x7",
-      "Rear Wheel Size (inches)": "18x8",
-      "id": 21
-    },
-    {
-      "Model": "R8",
-      "Wheelbase Length (mm)": 2650,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 22
-    },
-    {
-      "Model": "e-tron",
-      "Wheelbase Length (mm)": 2800,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 23
-    },
-    {
-      "Model": "A1",
-      "Wheelbase Length (mm)": 2460,
-      "Front Wheel Size (inches)": "16x7",
-      "Rear Wheel Size (inches)": "16x7",
-      "id": 24
-    },
-    {
-      "Model": "A3",
-      "Wheelbase Length (mm)": 2590,
-      "Front Wheel Size (inches)": "17x7",
-      "Rear Wheel Size (inches)": "17x7",
-      "id": 25
-    }
-  ],
-  "BMW": [
-    {
-      "Model": "Z4",
-      "Wheelbase Length (mm)": 2470,
-      "Front Wheel Size (inches)": "18x7.5",
-      "Rear Wheel Size (inches)": "18x8",
-      "id": 26
-    },
-    {
-      "Model": "X6",
-      "Wheelbase Length (mm)": 2940,
-      "Front Wheel Size (inches)": "20x8.5",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 27
-    },
-    {
-      "Model": "X7",
-      "Wheelbase Length (mm)": 3105,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x9",
-      "id": 28
-    },
-    {
-      "Model": "i8",
-      "Wheelbase Length (mm)": 2450,
-      "Front Wheel Size (inches)": "20x8",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 29
-    },
-    {
-      "Model": "X5",
-      "Wheelbase Length (mm)": 2935,
-      "Front Wheel Size (inches)": "19x8.5",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 30
-    }
-  ],
-  "Bentley": [
-    {
-      "Model": "Continental GT",
-      "Wheelbase Length (mm)": 2850,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 31
-    },
-    {
-      "Model": "Bentayga",
-      "Wheelbase Length (mm)": 2990,
-      "Front Wheel Size (inches)": "22x9",
-      "Rear Wheel Size (inches)": "22x10",
-      "id": 32
-    },
-    {
-      "Model": "Flying Spur",
-      "Wheelbase Length (mm)": 3100,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 33
-    },
-    {
-      "Model": "Mulsanne",
-      "Wheelbase Length (mm)": 3360,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 34
-    },
-    {
-      "Model": "Azure",
-      "Wheelbase Length (mm)": 3070,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 35
-    }
-  ],
-  "Cadillac": [
-    {
-      "Model": "Escalade",
-      "Wheelbase Length (mm)": 3070,
-      "Front Wheel Size (inches)": "22x9",
-      "Rear Wheel Size (inches)": "22x10",
-      "id": 36
-    },
-    {
-      "Model": "CTS",
-      "Wheelbase Length (mm)": 2870,
-      "Front Wheel Size (inches)": "18x8",
-      "Rear Wheel Size (inches)": "18x9",
-      "id": 37
-    },
-    {
-      "Model": "XT5",
-      "Wheelbase Length (mm)": 2800,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x8",
-      "id": 38
-    },
-    {
-      "Model": "ATS",
-      "Wheelbase Length (mm)": 2750,
-      "Front Wheel Size (inches)": "18x7.5",
-      "Rear Wheel Size (inches)": "18x7.5",
-      "id": 39
-    },
-    {
-      "Model": "CT6",
-      "Wheelbase Length (mm)": 2900,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 40
-    }
-  ],
-  "Chevrolet": [
+ "Bugatti": {"image":"./imgs/Bugatti.jpg",
+ "models":[
+  {
+    "Model": "Veyron",
+    "Wheelbase Length (mm)": 2600,
+    "Front Wheel Size (inches)": "20x8",
+    "Rear Wheel Size (inches)": "20x8",
+    "id": 1
+  },
+  {
+    "Model": "Chiron",
+    "Wheelbase Length (mm)": 2710,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 2
+  },
+  {
+    "Model": "Divo",
+    "Wheelbase Length (mm)": 2650,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 3
+  },
+  {
+    "Model": "Centodieci",
+    "Wheelbase Length (mm)": 2640,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 4
+  },
+  {
+    "Model": "Bolide",
+    "Wheelbase Length (mm)": 2500,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 5
+  },
+  {
+    "Model": "La Voiture Noire",
+    "Wheelbase Length (mm)": 2710,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 6
+  },
+  {
+    "Model": "Veyron 16.4 Super Sport",
+    "Wheelbase Length (mm)": 2600,
+    "Front Wheel Size (inches)": "20x8",
+    "Rear Wheel Size (inches)": "20x8",
+    "id": 7
+  },
+  {
+    "Model": "Chiron Pur Sport",
+    "Wheelbase Length (mm)": 2710,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 8
+  },
+  {
+    "Model": "Chiron Sport",
+    "Wheelbase Length (mm)": 2710,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 9
+  },
+  {
+    "Model": "Chiron Super Sport 300+",
+    "Wheelbase Length (mm)": 2710,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 10
+  },
+  {
+    "Model": "Chiron Noire",
+    "Wheelbase Length (mm)": 2710,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 11
+  }
+]},
+  "Acura": {"image":"./imgs/acura.jpg",
+  "models":[
+  {
+    "Model": "MDX",
+    "Wheelbase Length (mm)": 2800,
+    "Front Wheel Size (inches)": "18x8",
+    "Rear Wheel Size (inches)": "18x9",
+    "id": 12
+  },
+  {
+    "Model": "RDX",
+    "Wheelbase Length (mm)": 2600,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x7.5",
+    "id": 13
+  },
+  {
+    "Model": "TLX",
+    "Wheelbase Length (mm)": 2800,
+    "Front Wheel Size (inches)": "19x8",
+    "Rear Wheel Size (inches)": "19x9",
+    "id": 14
+  },
+  {
+    "Model": "ILX",
+    "Wheelbase Length (mm)": 2670,
+    "Front Wheel Size (inches)": "17x7",
+    "Rear Wheel Size (inches)": "17x7",
+    "id": 15
+  },
+  {
+    "Model": "NSX",
+    "Wheelbase Length (mm)": 2600,
+    "Front Wheel Size (inches)": "19x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 16
+  },
+  {
+    "Model": "ZDX",
+    "Wheelbase Length (mm)": 2950,
+    "Front Wheel Size (inches)": "20x8",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 17
+  },
+  {
+    "Model": "RLX",
+    "Wheelbase Length (mm)": 2900,
+    "Front Wheel Size (inches)": "19x8",
+    "Rear Wheel Size (inches)": "19x9",
+    "id": 18
+  },
+  {
+    "Model": "TL",
+    "Wheelbase Length (mm)": 2700,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x8",
+    "id": 19
+  },
+  {
+    "Model": "CL",
+    "Wheelbase Length (mm)": 2670,
+    "Front Wheel Size (inches)": "17x7.5",
+    "Rear Wheel Size (inches)": "17x7.5",
+    "id": 20
+  },
+  {
+    "Model": "Integra",
+    "Wheelbase Length (mm)": 2700,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x7.5",
+    "id": 21
+  }
+]},
+  "Alfa Romeo": {"image":"./imgs/alfa-romeo.jpg",
+  "models":[
+  {
+    "Model": "Giulia",
+    "Wheelbase Length (mm)": 2820,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x8",
+    "id": 21
+  },
+  {
+    "Model": "Stelvio",
+    "Wheelbase Length (mm)": 2890,
+    "Front Wheel Size (inches)": "19x8",
+    "Rear Wheel Size (inches)": "19x9",
+    "id": 22
+  },
+  {
+    "Model": "4C",
+    "Wheelbase Length (mm)": 2350,
+    "Front Wheel Size (inches)": "17x7.5",
+    "Rear Wheel Size (inches)": "17x7.5",
+    "id": 23
+  },
+  {
+    "Model": "Spider",
+    "Wheelbase Length (mm)": 2420,
+    "Front Wheel Size (inches)": "17x7.5",
+    "Rear Wheel Size (inches)": "17x8",
+    "id": 24
+  },
+  {
+    "Model": "Giulietta",
+    "Wheelbase Length (mm)": 2520,
+    "Front Wheel Size (inches)": "17x7.5",
+    "Rear Wheel Size (inches)": "17x7.5",
+    "id": 25
+  },
+  {
+    "Model": "Tonale",
+    "Wheelbase Length (mm)": 2630,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x8",
+    "id": 26
+  },
+  {
+    "Model": "Mito",
+    "Wheelbase Length (mm)": 2510,
+    "Front Wheel Size (inches)": "17x7",
+    "Rear Wheel Size (inches)": "17x7",
+    "id": 27
+  }
+]},
+  "Aston Martin": {"image":"./imgs/Aston-Martin.jpg",
+  "models":[
+  {
+    "Model": "DB11",
+    "Wheelbase Length (mm)": 2850,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 28
+  },
+  {
+    "Model": "Vantage",
+    "Wheelbase Length (mm)": 2710,
+    "Front Wheel Size (inches)": "19x8",
+    "Rear Wheel Size (inches)": "19x9",
+    "id": 29
+  },
+  {
+    "Model": "Rapide",
+    "Wheelbase Length (mm)": 2890,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 30
+  },
+  {
+    "Model": "Vanquish",
+    "Wheelbase Length (mm)": 2690,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 31
+  },
+  {
+    "Model": "DBS",
+    "Wheelbase Length (mm)": 2800,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 32
+  },
+  {
+    "Model": "DBX",
+    "Wheelbase Length (mm)": 3060,
+    "Front Wheel Size (inches)": "22x9",
+    "Rear Wheel Size (inches)": "22x10",
+    "id": 33
+  },
+  {
+    "Model": "One-77",
+    "Wheelbase Length (mm)": 2700,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 34
+  },
+  {
+    "Model": "Vulcan",
+    "Wheelbase Length (mm)": 2760,
+    "Front Wheel Size (inches)": "18x8.5",
+    "Rear Wheel Size (inches)": "18x9.5",
+    "id": 35
+  }
+]},
+  "Audi": {"image":"./imgs/audi.png",
+  "models":[
+  {
+    "Model": "TT",
+    "Wheelbase Length (mm)": 2500,
+    "Front Wheel Size (inches)": "18x7",
+    "Rear Wheel Size (inches)": "18x8",
+    "id": 36
+  },
+  {
+    "Model": "R8",
+    "Wheelbase Length (mm)": 2650,
+    "Front Wheel Size (inches)": "19x8",
+    "Rear Wheel Size (inches)": "19x9",
+    "id": 37
+  },
+  {
+    "Model": "e-tron",
+    "Wheelbase Length (mm)": 2800,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 38
+  },
+  {
+    "Model": "A1",
+    "Wheelbase Length (mm)": 2460,
+    "Front Wheel Size (inches)": "16x7",
+    "Rear Wheel Size (inches)": "16x7",
+    "id": 39
+  },
+  {
+    "Model": "A3",
+    "Wheelbase Length (mm)": 2590,
+    "Front Wheel Size (inches)": "17x7",
+    "Rear Wheel Size (inches)": "17x7",
+    "id": 40
+  },
+  {
+    "Model": "A4",
+    "Wheelbase Length (mm)": 2810,
+    "Front Wheel Size (inches)": "18x8",
+    "Rear Wheel Size (inches)": "18x8.5",
+    "id": 41
+  },
+  {
+    "Model": "A5",
+    "Wheelbase Length (mm)": 2820,
+    "Front Wheel Size (inches)": "19x8",
+    "Rear Wheel Size (inches)": "19x9",
+    "id": 42
+  },
+  {
+    "Model": "Q7",
+    "Wheelbase Length (mm)": 2990,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 43
+  },
+  {
+    "Model": "Q5",
+    "Wheelbase Length (mm)": 2810,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x8",
+    "id": 44
+  },
+  {
+    "Model": "Q8",
+    "Wheelbase Length (mm)": 2995,
+    "Front Wheel Size (inches)": "21x9",
+    "Rear Wheel Size (inches)": "21x9",
+    "id": 45
+  }
+]},
+  "BMW": {"image":"./imgs/bmw.png",
+  "models":[
+  {
+    "Model": "Z4",
+    "Wheelbase Length (mm)": 2470,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x8",
+    "id": 46
+  },
+  {
+    "Model": "X6",
+    "Wheelbase Length (mm)": 2940,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 47
+  },
+  {
+    "Model": "X7",
+    "Wheelbase Length (mm)": 3105,
+    "Front Wheel Size (inches)": "21x9",
+    "Rear Wheel Size (inches)": "21x9",
+    "id": 48
+  },
+  {
+    "Model": "i8",
+    "Wheelbase Length (mm)": 2450,
+    "Front Wheel Size (inches)": "20x8",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 49
+  },
+  {
+    "Model": "X5",
+    "Wheelbase Length (mm)": 2935,
+    "Front Wheel Size (inches)": "19x8.5",
+    "Rear Wheel Size (inches)": "19x9",
+    "id": 50
+  },
+  {
+    "Model": "3 Series",
+    "Wheelbase Length (mm)": 2810,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x8",
+    "id": 51
+  },
+  {
+    "Model": "5 Series",
+    "Wheelbase Length (mm)": 2960,
+    "Front Wheel Size (inches)": "19x8.5",
+    "Rear Wheel Size (inches)": "19x9",
+    "id": 52
+  },
+  {
+    "Model": "7 Series",
+    "Wheelbase Length (mm)": 3210,
+    "Front Wheel Size (inches)": "20x8.5",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 53
+  },
+  {
+    "Model": "M3",
+    "Wheelbase Length (mm)": 2810,
+    "Front Wheel Size (inches)": "18x8",
+    "Rear Wheel Size (inches)": "18x8.5",
+    "id": 54
+  },
+  {
+    "Model": "M5",
+    "Wheelbase Length (mm)": 2950,
+    "Front Wheel Size (inches)": "19x8.5",
+    "Rear Wheel Size (inches)": "19x9.5",
+    "id": 55
+  }
+]},
+  "Bentley": {"image":"./imgs/bentley.png",
+  "models":[
+  {
+    "Model": "Continental GT",
+    "Wheelbase Length (mm)": 2850,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 56
+  },
+  {
+    "Model": "Bentayga",
+    "Wheelbase Length (mm)": 2990,
+    "Front Wheel Size (inches)": "22x9",
+    "Rear Wheel Size (inches)": "22x10",
+    "id": 57
+  },
+  {
+    "Model": "Flying Spur",
+    "Wheelbase Length (mm)": 3100,
+    "Front Wheel Size (inches)": "21x9",
+    "Rear Wheel Size (inches)": "21x10",
+    "id": 58
+  },
+  {
+    "Model": "Mulsanne",
+    "Wheelbase Length (mm)": 3360,
+    "Front Wheel Size (inches)": "21x9",
+    "Rear Wheel Size (inches)": "21x10",
+    "id": 59
+  },
+  {
+    "Model": "Azure",
+    "Wheelbase Length (mm)": 3070,
+    "Front Wheel Size (inches)": "21x9",
+    "Rear Wheel Size (inches)": "21x10",
+    "id": 60
+  }
+]},
+  "Cadillac": {"image":"./imgs/cadillac.png",
+  "models":[
+  {
+    "Model": "Escalade",
+    "Wheelbase Length (mm)": 3070,
+    "Front Wheel Size (inches)": "22x9",
+    "Rear Wheel Size (inches)": "22x10",
+    "id": 61
+  },
+  {
+    "Model": "CTS",
+    "Wheelbase Length (mm)": 2870,
+    "Front Wheel Size (inches)": "18x8",
+    "Rear Wheel Size (inches)": "18x9",
+    "id": 62
+  },
+  {
+    "Model": "XT5",
+    "Wheelbase Length (mm)": 2800,
+    "Front Wheel Size (inches)": "19x8",
+    "Rear Wheel Size (inches)": "19x8",
+    "id": 63
+  },
+  {
+    "Model": "ATS",
+    "Wheelbase Length (mm)": 2750,
+    "Front Wheel Size (inches)": "18x7.5",
+    "Rear Wheel Size (inches)": "18x7.5",
+    "id": 64
+  },
+  {
+    "Model": "CT6",
+    "Wheelbase Length (mm)": 2900,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x9",
+    "id": 65
+  }
+]},
+  "Chevrolet": {"image":"./imgs/chevrolet.jpg",
+  "models":[
     {
       "Model": "Blazer",
       "Wheelbase Length (mm)": 2800,
       "Front Wheel Size (inches)": "19x8",
       "Rear Wheel Size (inches)": "19x8",
-      "id": 41
+      "id": 66
     },
     {
       "Model": "Trailblazer",
       "Wheelbase Length (mm)": 2650,
       "Front Wheel Size (inches)": "18x7.5",
       "Rear Wheel Size (inches)": "18x7.5",
-      "id": 42
+      "id": 67
     },
     {
       "Model": "Colorado",
       "Wheelbase Length (mm)": 2850,
       "Front Wheel Size (inches)": "18x8",
       "Rear Wheel Size (inches)": "18x8",
-      "id": 43
+      "id": 68
     },
     {
       "Model": "Equinox",
       "Wheelbase Length (mm)": 2700,
       "Front Wheel Size (inches)": "18x7.5",
       "Rear Wheel Size (inches)": "18x8",
-      "id": 44
+      "id": 69
     },
     {
       "Model": "Traverse",
       "Wheelbase Length (mm)": 3000,
       "Front Wheel Size (inches)": "20x8.5",
       "Rear Wheel Size (inches)": "20x9",
-      "id": 45
-    }
-  ],
-  "Dodge": [
-    {
-      "Model": "Charger",
-      "Wheelbase Length (mm)": 2950,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 46
+      "id": 70
     },
     {
-      "Model": "Challenger",
-      "Wheelbase Length (mm)": 2890,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 47
+      "Model": "Aveo",
+      "Wheelbase Length (mm)": 2525,
+      "Front Wheel Size (inches)": "15x6",
+      "Rear Wheel Size (inches)": "15x6",
+      "id": 71
     },
     {
-      "Model": "Durango",
-      "Wheelbase Length (mm)": 3050,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 48
+      "Model": "Optra",
+      "Wheelbase Length (mm)": 2640,
+      "Front Wheel Size (inches)": "15x6.5",
+      "Rear Wheel Size (inches)": "15x6.5",
+      "id": 72
     },
     {
-      "Model": "Ram 1500",
-      "Wheelbase Length (mm)": 3530,
-      "Front Wheel Size (inches)": "20x8",
-      "Rear Wheel Size (inches)": "20x8",
-      "id": 49
+      "Model": "Cruze",
+      "Wheelbase Length (mm)": 2700,
+      "Front Wheel Size (inches)": "16x7",
+      "Rear Wheel Size (inches)": "16x7",
+      "id": 73
     },
     {
-      "Model": "Grand Caravan",
-      "Wheelbase Length (mm)": 3030,
+      "Model": "Spark",
+      "Wheelbase Length (mm)": 2375,
+      "Front Wheel Size (inches)": "14x5.5",
+      "Rear Wheel Size (inches)": "14x5.5",
+      "id": 74
+    },
+    {
+      "Model": "Malibu",
+      "Wheelbase Length (mm)": 2735,
       "Front Wheel Size (inches)": "17x7",
       "Rear Wheel Size (inches)": "17x7",
-      "id": 50
+      "id": 75
     }
-  ],
-  "Ford": [
+  ]},
+  "Dodge": {"image":"./imgs/dodge.png",
+  "models":[
+  {
+    "Model": "Charger",
+    "Wheelbase Length (mm)": 2950,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 76
+  },
+  {
+    "Model": "Challenger",
+    "Wheelbase Length (mm)": 2890,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 77
+  },
+  {
+    "Model": "Durango",
+    "Wheelbase Length (mm)": 3050,
+    "Front Wheel Size (inches)": "20x9",
+    "Rear Wheel Size (inches)": "20x10",
+    "id": 78
+  },
+  {
+    "Model": "Ram 1500",
+    "Wheelbase Length (mm)": 3530,
+    "Front Wheel Size (inches)": "20x8",
+    "Rear Wheel Size (inches)": "20x8",
+    "id": 79
+  },
+  {
+    "Model": "Grand Caravan",
+    "Wheelbase Length (mm)": 3030,
+    "Front Wheel Size (inches)": "17x7",
+    "Rear Wheel Size (inches)": "17x7",
+    "id": 80
+  }
+]},
+  "Ford": {"image":"./imgs/ford.png",
+  "models":[
     {
       "Model": "Mustang",
       "Wheelbase Length (mm)": 2720,
@@ -405,7 +633,7 @@
       "Rear Wheel Size (inches)": "18x8",
       "id": 55
     }
-  ],
+  ]},
   "Honda": [
     {
       "Model": "Accord",
@@ -591,189 +819,41 @@
       "id": 80
     }
   ],
-  "Maserati": [
+  "Toyota": [
     {
-      "Model": "Levante",
-      "Wheelbase Length (mm)": 3000,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 81
-    },
-    {
-      "Model": "Ghibli",
-      "Wheelbase Length (mm)": 2920,
-      "Front Wheel Size (inches)": "20x8",
-      "Rear Wheel Size (inches)": "20x9",
-      "id": 82
-    },
-    {
-      "Model": "Quattroporte",
-      "Wheelbase Length (mm)": 3171,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 83
-    },
-    {
-      "Model": "GranTurismo",
-      "Wheelbase Length (mm)": 2670,
+      "Model": "Highlander",
+      "Wheelbase Length (mm)": 2850,
       "Front Wheel Size (inches)": "19x8",
       "Rear Wheel Size (inches)": "19x9",
-      "id": 84
+      "id": 111
     },
     {
-      "Model": "MC20",
-      "Wheelbase Length (mm)": 2600,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 85
-    }
-  ],
-  "Mercedes-Benz": [
+      "Model": "RAV4",
+      "Wheelbase Length (mm)": 2690,
+      "Front Wheel Size (inches)": "18x7",
+      "Rear Wheel Size (inches)": "18x7",
+      "id": 112
+    },
     {
-      "Model": "A-Class",
-      "Wheelbase Length (mm)": 2720,
+      "Model": "Land Cruiser",
+      "Wheelbase Length (mm)": 2850,
+      "Front Wheel Size (inches)": "18x8",
+      "Rear Wheel Size (inches)": "18x8",
+      "id": 113
+    },
+    {
+      "Model": "Camry",
+      "Wheelbase Length (mm)": 2825,
+      "Front Wheel Size (inches)": "18x7.5",
+      "Rear Wheel Size (inches)": "18x8",
+      "id": 114
+    },
+    {
+      "Model": "Corolla",
+      "Wheelbase Length (mm)": 2700,
       "Front Wheel Size (inches)": "17x7",
       "Rear Wheel Size (inches)": "17x7",
-      "id": 86
-    },
-    {
-      "Model": "C-Class",
-      "Wheelbase Length (mm)": 2840,
-      "Front Wheel Size (inches)": "18x8",
-      "Rear Wheel Size (inches)": "18x9",
-      "id": 87
-    },
-    {
-      "Model": "E-Class",
-      "Wheelbase Length (mm)": 2940,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 88
-    },
-    {
-      "Model": "GLC",
-      "Wheelbase Length (mm)": 2870,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 89
-    },
-    {
-      "Model": "S-Class",
-      "Wheelbase Length (mm)": 3165,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 90
-    }
-  ],
-  "Nissan": [
-    {
-      "Model": "Altima",
-      "Wheelbase Length (mm)": 2775,
-      "Front Wheel Size (inches)": "18x7",
-      "Rear Wheel Size (inches)": "18x7",
-      "id": 91
-    },
-    {
-      "Model": "Pathfinder",
-      "Wheelbase Length (mm)": 2900,
-      "Front Wheel Size (inches)": "20x8",
-      "Rear Wheel Size (inches)": "20x8",
-      "id": 92
-    },
-    {
-      "Model": "Rogue",
-      "Wheelbase Length (mm)": 2705,
-      "Front Wheel Size (inches)": "18x7",
-      "Rear Wheel Size (inches)": "18x7",
-      "id": 93
-    },
-    {
-      "Model": "Frontier",
-      "Wheelbase Length (mm)": 2830,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 94
-    },
-    {
-      "Model": "Sentra",
-      "Wheelbase Length (mm)": 2650,
-      "Front Wheel Size (inches)": "16x7",
-      "Rear Wheel Size (inches)": "16x7",
-      "id": 95
-    }
-  ],
-  "Porsche": [
-    {
-      "Model": "718 Cayman",
-      "Wheelbase Length (mm)": 2470,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 96
-    },
-    {
-      "Model": "Panamera",
-      "Wheelbase Length (mm)": 2950,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 97
-    },
-    {
-      "Model": "911",
-      "Wheelbase Length (mm)": 2450,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 98
-    },
-    {
-      "Model": "Taycan",
-      "Wheelbase Length (mm)": 2900,
-      "Front Wheel Size (inches)": "20x9",
-      "Rear Wheel Size (inches)": "20x10",
-      "id": 99
-    },
-    {
-      "Model": "Cayenne",
-      "Wheelbase Length (mm)": 2890,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 100
-    }
-  ],
-  "Rolls-Royce": [
-    {
-      "Model": "Phantom",
-      "Wheelbase Length (mm)": 3355,
-      "Front Wheel Size (inches)": "21x9.5",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 101
-    },
-    {
-      "Model": "Cullinan",
-      "Wheelbase Length (mm)": 3300,
-      "Front Wheel Size (inches)": "22x9",
-      "Rear Wheel Size (inches)": "22x10",
-      "id": 102
-    },
-    {
-      "Model": "Dawn",
-      "Wheelbase Length (mm)": 3250,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 103
-    },
-    {
-      "Model": "Wraith",
-      "Wheelbase Length (mm)": 3200,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 104
-    },
-    {
-      "Model": "Ghost",
-      "Wheelbase Length (mm)": 3450,
-      "Front Wheel Size (inches)": "21x9",
-      "Rear Wheel Size (inches)": "21x10",
-      "id": 105
+      "id": 115
     }
   ],
   "Subaru": [
@@ -813,43 +893,192 @@
       "id": 110
     }
   ],
-  "Toyota": [
+  "Rolls-Royce": [
     {
-      "Model": "Highlander",
-      "Wheelbase Length (mm)": 2850,
-      "Front Wheel Size (inches)": "19x8",
-      "Rear Wheel Size (inches)": "19x9",
-      "id": 111
+      "Model": "Phantom",
+      "Wheelbase Length (mm)": 3355,
+      "Front Wheel Size (inches)": "21x9.5",
+      "Rear Wheel Size (inches)": "21x10",
+      "id": 101
     },
     {
-      "Model": "RAV4",
-      "Wheelbase Length (mm)": 2690,
-      "Front Wheel Size (inches)": "18x7",
-      "Rear Wheel Size (inches)": "18x7",
-      "id": 112
+      "Model": "Cullinan",
+      "Wheelbase Length (mm)": 3300,
+      "Front Wheel Size (inches)": "22x9",
+      "Rear Wheel Size (inches)": "22x10",
+      "id": 102
     },
     {
-      "Model": "Land Cruiser",
-      "Wheelbase Length (mm)": 2850,
-      "Front Wheel Size (inches)": "18x8",
-      "Rear Wheel Size (inches)": "18x8",
-      "id": 113
+      "Model": "Dawn",
+      "Wheelbase Length (mm)": 3250,
+      "Front Wheel Size (inches)": "21x9",
+      "Rear Wheel Size (inches)": "21x10",
+      "id": 103
     },
     {
-      "Model": "Camry",
-      "Wheelbase Length (mm)": 2825,
-      "Front Wheel Size (inches)": "18x7.5",
-      "Rear Wheel Size (inches)": "18x8",
-      "id": 114
+      "Model": "Wraith",
+      "Wheelbase Length (mm)": 3200,
+      "Front Wheel Size (inches)": "21x9",
+      "Rear Wheel Size (inches)": "21x10",
+      "id": 104
     },
     {
-      "Model": "Corolla",
-      "Wheelbase Length (mm)": 2700,
-      "Front Wheel Size (inches)": "17x7",
-      "Rear Wheel Size (inches)": "17x7",
-      "id": 115
+      "Model": "Ghost",
+      "Wheelbase Length (mm)": 3450,
+      "Front Wheel Size (inches)": "21x9",
+      "Rear Wheel Size (inches)": "21x10",
+      "id": 105
     }
   ],
+  "Porsche": [
+    {
+      "Model": "718 Cayman",
+      "Wheelbase Length (mm)": 2470,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x9",
+      "id": 96
+    },
+    {
+      "Model": "Panamera",
+      "Wheelbase Length (mm)": 2950,
+      "Front Wheel Size (inches)": "20x9",
+      "Rear Wheel Size (inches)": "20x10",
+      "id": 97
+    },
+    {
+      "Model": "911",
+      "Wheelbase Length (mm)": 2450,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x9",
+      "id": 98
+    },
+    {
+      "Model": "Taycan",
+      "Wheelbase Length (mm)": 2900,
+      "Front Wheel Size (inches)": "20x9",
+      "Rear Wheel Size (inches)": "20x10",
+      "id": 99
+    },
+    {
+      "Model": "Cayenne",
+      "Wheelbase Length (mm)": 2890,
+      "Front Wheel Size (inches)": "21x9",
+      "Rear Wheel Size (inches)": "21x10",
+      "id": 100
+    }
+  ],
+  "Nissan": [
+    {
+      "Model": "Altima",
+      "Wheelbase Length (mm)": 2775,
+      "Front Wheel Size (inches)": "18x7",
+      "Rear Wheel Size (inches)": "18x7",
+      "id": 91
+    },
+    {
+      "Model": "Pathfinder",
+      "Wheelbase Length (mm)": 2900,
+      "Front Wheel Size (inches)": "20x8",
+      "Rear Wheel Size (inches)": "20x8",
+      "id": 92
+    },
+    {
+      "Model": "Rogue",
+      "Wheelbase Length (mm)": 2705,
+      "Front Wheel Size (inches)": "18x7",
+      "Rear Wheel Size (inches)": "18x7",
+      "id": 93
+    },
+    {
+      "Model": "Frontier",
+      "Wheelbase Length (mm)": 2830,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x9",
+      "id": 94
+    },
+    {
+      "Model": "Sentra",
+      "Wheelbase Length (mm)": 2650,
+      "Front Wheel Size (inches)": "16x7",
+      "Rear Wheel Size (inches)": "16x7",
+      "id": 95
+    }
+  ],
+  "Mercedes-Benz": [
+    {
+      "Model": "A-Class",
+      "Wheelbase Length (mm)": 2720,
+      "Front Wheel Size (inches)": "17x7",
+      "Rear Wheel Size (inches)": "17x7",
+      "id": 86
+    },
+    {
+      "Model": "C-Class",
+      "Wheelbase Length (mm)": 2840,
+      "Front Wheel Size (inches)": "18x8",
+      "Rear Wheel Size (inches)": "18x9",
+      "id": 87
+    },
+    {
+      "Model": "E-Class",
+      "Wheelbase Length (mm)": 2940,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x9",
+      "id": 88
+    },
+    {
+      "Model": "GLC",
+      "Wheelbase Length (mm)": 2870,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x9",
+      "id": 89
+    },
+    {
+      "Model": "S-Class",
+      "Wheelbase Length (mm)": 3165,
+      "Front Wheel Size (inches)": "20x9",
+      "Rear Wheel Size (inches)": "20x10",
+      "id": 90
+    }
+  ],
+  "Maserati": [
+    {
+      "Model": "Levante",
+      "Wheelbase Length (mm)": 3000,
+      "Front Wheel Size (inches)": "21x9",
+      "Rear Wheel Size (inches)": "21x10",
+      "id": 81
+    },
+    {
+      "Model": "Ghibli",
+      "Wheelbase Length (mm)": 2920,
+      "Front Wheel Size (inches)": "20x8",
+      "Rear Wheel Size (inches)": "20x9",
+      "id": 82
+    },
+    {
+      "Model": "Quattroporte",
+      "Wheelbase Length (mm)": 3171,
+      "Front Wheel Size (inches)": "21x9",
+      "Rear Wheel Size (inches)": "21x10",
+      "id": 83
+    },
+    {
+      "Model": "GranTurismo",
+      "Wheelbase Length (mm)": 2670,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x9",
+      "id": 84
+    },
+    {
+      "Model": "MC20",
+      "Wheelbase Length (mm)": 2600,
+      "Front Wheel Size (inches)": "20x9",
+      "Rear Wheel Size (inches)": "20x10",
+      "id": 85
+    }
+  ],
+
   "Volkswagen": [
     {
       "Model": "Golf",
@@ -885,6 +1114,110 @@
       "Front Wheel Size (inches)": "17x7",
       "Rear Wheel Size (inches)": "17x7",
       "id": 120
+    },
+    {
+      "Model": "Beetle",
+      "Wheelbase Length (mm)": 2537,
+      "Front Wheel Size (inches)": "16x7",
+      "Rear Wheel Size (inches)": "16x8",
+      "id": 121
+    },
+    {
+      "Model": "Arteon",
+      "Wheelbase Length (mm)": 2835,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x9",
+      "id": 122
+    },
+    {
+      "Model": "ID.4",
+      "Wheelbase Length (mm)": 2771,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x8",
+      "id": 123
+    },
+    {
+      "Model": "ID.3",
+      "Wheelbase Length (mm)": 2765,
+      "Front Wheel Size (inches)": "18x7",
+      "Rear Wheel Size (inches)": "18x7",
+      "id": 124
+    },
+    {
+      "Model": "Touareg",
+      "Wheelbase Length (mm)": 2904,
+      "Front Wheel Size (inches)": "20x9",
+      "Rear Wheel Size (inches)": "20x9",
+      "id": 125
+    },
+    {
+      "Model": "Polo",
+      "Wheelbase Length (mm)": 2564,
+      "Front Wheel Size (inches)": "16x7",
+      "Rear Wheel Size (inches)": "16x7",
+      "id": 126
+    },
+    {
+      "Model": "T-Cross",
+      "Wheelbase Length (mm)": 2651,
+      "Front Wheel Size (inches)": "17x7",
+      "Rear Wheel Size (inches)": "17x7",
+      "id": 127
+    },
+    {
+      "Model": "T-Roc",
+      "Wheelbase Length (mm)": 2590,
+      "Front Wheel Size (inches)": "17x7",
+      "Rear Wheel Size (inches)": "17x7",
+      "id": 128
+    },
+    {
+      "Model": "Caddy",
+      "Wheelbase Length (mm)": 2755,
+      "Front Wheel Size (inches)": "16x7",
+      "Rear Wheel Size (inches)": "16x7",
+      "id": 129
+    },
+    {
+      "Model": "Transporter",
+      "Wheelbase Length (mm)": 3000,
+      "Front Wheel Size (inches)": "17x8",
+      "Rear Wheel Size (inches)": "17x8",
+      "id": 130
+    },
+    {
+      "Model": "Multivan",
+      "Wheelbase Length (mm)": 3300,
+      "Front Wheel Size (inches)": "18x8",
+      "Rear Wheel Size (inches)": "18x8",
+      "id": 131
+    },
+    {
+      "Model": "Sharan",
+      "Wheelbase Length (mm)": 2920,
+      "Front Wheel Size (inches)": "17x7",
+      "Rear Wheel Size (inches)": "17x8",
+      "id": 132
+    },
+    {
+      "Model": "Amarok",
+      "Wheelbase Length (mm)": 3097,
+      "Front Wheel Size (inches)": "19x8",
+      "Rear Wheel Size (inches)": "19x8",
+      "id": 133
+    },
+    {
+      "Model": "Fox",
+      "Wheelbase Length (mm)": 2465,
+      "Front Wheel Size (inches)": "14x6",
+      "Rear Wheel Size (inches)": "14x6",
+      "id": 134
+    },
+    {
+      "Model": "Scirocco",
+      "Wheelbase Length (mm)": 2578,
+      "Front Wheel Size (inches)": "18x8",
+      "Rear Wheel Size (inches)": "18x9",
+      "id": 135
     }
-  ]
-}
+]}
