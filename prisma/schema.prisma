@@ -33,23 +33,27 @@ model Model {
 
 // schema.prisma
 model Car {
-  id          String @id @map("_id") @default(auto()) @db.ObjectId
-  brand        String
-  model        String
-  color        String
-  fuelType     String
-  discNumber   String
-  licensePlate String
-  madeYear     String
-  kilometers   String
-  estmara      String?
+  id            String  @id @map("_id") @default(auto()) @db.ObjectId
+  brand         String
+  model         String
+  color         String
+  fuelType      String
+  discNumber    String
+  licensePlate  String
+  madeYear      String
+  kilometers    String
+  estmara       String?
+  fixes         Fix[]   
 }
+
 model Fix {
-  id          String   @id  @map("_id") @default(auto()) @db.ObjectId
-  kilometers  String
-  lastFixDate DateTime
-  fix         String
-  rememberMe  String
-  morfaqat    String
-  createdAt   DateTime @default(now())
+  id            String   @id @map("_id") @default(auto()) @db.ObjectId
+  kilometers    String
+  lastFixDate   DateTime
+  fix           String
+  rememberMe    String
+  morfaqat      String
+  createdAt     DateTime @default(now())
+  carId         String   @db.ObjectId
+  car           Car      @relation(fields: [carId], references: [id]) 
 }
