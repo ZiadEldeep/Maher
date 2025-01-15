@@ -35,7 +35,6 @@ model User {
   @@unique([email])
   @@unique([phone])
 }
-
 model Car {
   id            String  @id @default(auto()) @map("_id") @db.ObjectId
   brand         String

@@ -235,7 +235,7 @@ app.post("/login", async (req, res) => {
 //   }
 // });
 app.post('/addCar', async (req, res) => {
-  const { userId, brand, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers, estmara } = req.body;
+  const { userId, brand, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers, estmara, fixDescription } = req.body;
 
   try {
     // Check if the user exists
@@ -263,40 +263,61 @@ app.post('/addCar', async (req, res) => {
       },
     });
 
-    // Update the user's cars array by adding the new car's id
-    await prisma.user.update({
-      where: { id: userId },
+    // Create a fix record for the new car
+    const newFix = await prisma.fix.create({
       data: {
-        cars: {
-          // Add the new car id to the user's cars array
-          push: newCar.id,
-        },
+        description: fixDescription,  // Description of the fix
+        date: new Date(),  // Date of the fix
+        carId: newCar.id,  // Linking fix to the car by carId
       },
     });
 
-    res.status(201).json({ message: 'Car added successfully', car: newCar });
+    // Return the updated user data with the associated cars (including the new car)
+    const updatedUser = await prisma.user.findUnique({
+      where: { id: userId },
+      include: {
+        cars: true, // Include related cars data
+      },
+    });
+
+    res.status(201).json({
+      message: 'Car and fix added successfully',
+      car: newCar,
+      fix: newFix,
+      user: updatedUser, // Include the updated user with car IDs
+    });
   } catch (error) {
-    console.error('Error adding car:', error);
-    res.status(500).json({ message: 'Error adding car', error: error.message });
+    console.error('Error adding car and fix:', error);
+    res.status(500).json({ message: 'Error adding car and fix', error: error.message });
   }
 });
-
 app.post("/fix", async (req, res) => {
-  const { kilometers, lastFixDate, fix, rememberMe, morfaqat } = req.body;
+  const { kilometers, lastFixDate, fix, rememberMe, morfaqat, carId } = req.body;
 
   try {
     // Basic validation for required fields
-    if (!kilometers || !lastFixDate || !fix || !morfaqat) {
+    if (!kilometers || !lastFixDate || !fix || !morfaqat || !carId) {
       return res.status(400).json({ message: "All fields except 'rememberMe' are required" });
     }
-    // Save data to the database
+
+    // Check if the car exists
+    const car = await prisma.car.findUnique({
+      where: { id: carId },
+    });
+
+    if (!car) {
+      return res.status(404).json({ message: "Car not found" });
+    }
+
+    // Save fix data to the database
     const fixEntry = await prisma.fix.create({
       data: {
         kilometers,
         lastFixDate: new Date(lastFixDate),
         fix,
-        rememberMe, // Handle optional date
+        rememberMe, // Optional field
         morfaqat,
+        carId, // Associate the fix with the car
       },
     });
 
@@ -369,6 +390,49 @@ app.get('/getCar/:id', async (req, res) => {
     }
   }
 });
+app.get("/user/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    // Fetch the user by ID, including their cars and the fixes for each car
+    const user = await prisma.user.findUnique({
+      where: { id },
+      include: {
+        cars: {
+          include: {
+            fixes: {
+              select: {
+                fix: true, // Only select the 'fix' name
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // Check if user exists
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Prepare response with user data, including cars and fixes
+    const userData = {
+      ...user,
+      cars: user.cars.map((car) => ({
+        ...car,
+        fixes: car.fixes.map((fix) => ({
+          fixName: fix.fix,  // Just the fix name
+        })),
+      })),
+    };
+
+    res.status(200).json(userData);
+  } catch (error) {
+    console.error("Error fetching user data:", error);
+    res.status(500).json({ message: "Error fetching user data", error: error.message });
+  }
+});
+
 const PORT = 3999;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
