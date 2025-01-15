@@ -394,7 +394,7 @@ app.get("/user/:id", async (req, res) => {
   const { id } = req.params;
 
   try {
-    // Fetch the user by ID, including their cars and the fixes for each car
+    // Fetch the user by ID, including their cars and the full fix details for each car
     const user = await prisma.user.findUnique({
       where: { id },
       include: {
@@ -402,7 +402,13 @@ app.get("/user/:id", async (req, res) => {
           include: {
             fixes: {
               select: {
-                fix: true, // Only select the 'fix' name
+                id: true,            // Fix ID
+                kilometers: true,    // Kilometers
+                lastFixDate: true,   // Last fix date
+                fix: true,           // Fix name
+                rememberMe: true,    // Remember me
+                morfaqat: true,      // Morfaqat
+                createdAt: true,     // Created At
               },
             },
           },
@@ -415,13 +421,19 @@ app.get("/user/:id", async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Prepare response with user data, including cars and fixes
+    // Prepare response with user data, including cars and their full fix data
     const userData = {
       ...user,
       cars: user.cars.map((car) => ({
         ...car,
         fixes: car.fixes.map((fix) => ({
-          fixName: fix.fix,  // Just the fix name
+          id: fix.id,
+          kilometers: fix.kilometers,
+          lastFixDate: fix.lastFixDate,
+          fixName: fix.fix,
+          rememberMe: fix.rememberMe,
+          morfaqat: fix.morfaqat,
+          createdAt: fix.createdAt,
         })),
       })),
     };
@@ -432,7 +444,6 @@ app.get("/user/:id", async (req, res) => {
     res.status(500).json({ message: "Error fetching user data", error: error.message });
   }
 });
-
 const PORT = 3999;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
