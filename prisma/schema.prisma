@@ -42,7 +42,7 @@ model Car {
   licensePlate String
   madeYear     String
   kilometers   String
-  estmara      String
+  estmara      String?
 }
 model Fix {
   id          String   @id  @map("_id") @default(auto()) @db.ObjectId
