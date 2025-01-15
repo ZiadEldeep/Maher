@@ -263,6 +263,17 @@ app.post('/addCar', async (req, res) => {
       },
     });
 
+    // Update the user's cars array by adding the new car's id
+    await prisma.user.update({
+      where: { id: userId },
+      data: {
+        cars: {
+          // Add the new car id to the user's cars array
+          push: newCar.id,
+        },
+      },
+    });
+
     res.status(201).json({ message: 'Car added successfully', car: newCar });
   } catch (error) {
     console.error('Error adding car:', error);

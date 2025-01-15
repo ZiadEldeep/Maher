@@ -51,8 +51,6 @@ model Car {
   userId        String  @db.ObjectId // Foreign key for the relationship
   user          User    @relation("caar",fields: [userId], references: [id]) // Define the relationship
 }
-
-
 model Fix {
   id            String   @id @map("_id") @default(auto()) @db.ObjectId
   kilometers    String
