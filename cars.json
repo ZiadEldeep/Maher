@@ -1,5 +1,5 @@
 {
- "Bugatti": {"image":"./imgs/Bugatti.jpg",
+ "Bugatti": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/Bugatti.jpg",
  "models":[
   {
     "Model": "Veyron",
@@ -79,7 +79,7 @@
     "id": 11
   }
 ]},
-  "Acura": {"image":"./imgs/acura.jpg",
+  "Acura": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/acura.jpg",
   "models":[
   {
     "Model": "MDX",
@@ -152,7 +152,7 @@
     "id": 21
   }
 ]},
-  "Alfa Romeo": {"image":"./imgs/alfa-romeo.jpg",
+  "Alfa Romeo": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/alfa-romeo.jpg",
   "models":[
   {
     "Model": "Giulia",
@@ -204,7 +204,7 @@
     "id": 27
   }
 ]},
-  "Aston Martin": {"image":"./imgs/Aston-Martin.jpg",
+  "Aston Martin": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/Aston-Martin.jpg",
   "models":[
   {
     "Model": "DB11",
@@ -263,7 +263,7 @@
     "id": 35
   }
 ]},
-  "Audi": {"image":"./imgs/audi.png",
+  "Audi": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/audi.png",
   "models":[
   {
     "Model": "TT",
@@ -336,7 +336,7 @@
     "id": 45
   }
 ]},
-  "BMW": {"image":"./imgs/bmw.png",
+  "BMW": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/bmw.png",
   "models":[
   {
     "Model": "Z4",
@@ -409,7 +409,7 @@
     "id": 55
   }
 ]},
-  "Bentley": {"image":"./imgs/bentley.png",
+  "Bentley": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/bentley.png",
   "models":[
   {
     "Model": "Continental GT",
@@ -447,7 +447,7 @@
     "id": 60
   }
 ]},
-  "Cadillac": {"image":"./imgs/cadillac.png",
+  "Cadillac": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/cadillac.png",
   "models":[
   {
     "Model": "Escalade",
@@ -485,7 +485,7 @@
     "id": 65
   }
 ]},
-  "Chevrolet": {"image":"./imgs/chevrolet.jpg",
+  "Chevrolet": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/chevrolet.jpg",
   "models":[
     {
       "Model": "Blazer",
@@ -558,7 +558,7 @@
       "id": 75
     }
   ]},
-  "Dodge": {"image":"./imgs/dodge.png",
+  "Dodge": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/dodge.png",
   "models":[
   {
     "Model": "Charger",
@@ -596,7 +596,7 @@
     "id": 80
   }
 ]},
-  "Ford": {"image":"./imgs/ford.png",
+  "Ford": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/ford.png",
   "models":[
     {
       "Model": "Mustang",
@@ -634,7 +634,7 @@
       "id": 55
     }
   ]},
-  "Honda": {"image":"./imgs/honda.png",
+  "Honda": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/honda.png",
   "models":[
     {
       "Model": "Accord",
@@ -672,7 +672,7 @@
       "id": 60
     }
   ]},
-  "Hyundai": {"image":"./imgs/hyundai.png",
+  "Hyundai": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/hyundai.png",
   "models":[
     {
       "Model": "Sonata",
@@ -710,7 +710,7 @@
       "id": 65
     }
   ]},
-  "Jaguar": {"image":"./imgs/jaguar.png",
+  "Jaguar": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/jaguar.png",
   "models":[
     {
       "Model": "F-Pace",
@@ -748,7 +748,7 @@
       "id": 70
     }
   ]},
-  "Kia": {"image":"./imgs/kia.jpg",
+  "Kia": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/kia.jpg",
   "models":[
     {
       "Model": "Sorento",
@@ -786,7 +786,7 @@
       "id": 75
     }
   ]},
-  "Lexus": {"image":"./imgs/lexus.jpg",
+  "Lexus": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/lexus.jpg",
   "models":[
     {
       "Model": "RX",
@@ -824,7 +824,7 @@
       "id": 80
     }
   ]},
-  "Toyota": {"image":"./imgs/toyota.png",
+  "Toyota": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/toyota.png",
   "models":[
     {
       "Model": "Highlander",
@@ -862,7 +862,7 @@
       "id": 115
     }
   ]},
-  "Subaru": {"image":"./imgs/subaru.png",
+  "Subaru": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/subaru.png",
   "models":[
     {
       "Model": "Outback",
@@ -900,7 +900,7 @@
       "id": 110
     }
   ]},
-  "Rolls-Royce": {"image":"./imgs/rolls-royce.jpg",
+  "Rolls-Royce": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/rolls-royce.jpg",
   "models":[
     {
       "Model": "Phantom",
@@ -938,7 +938,7 @@
       "id": 105
     }
   ]},
-  "Porsche": {"image":"./imgs/porsche.png",
+  "Porsche": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/porsche.png",
   "models":[
     {
       "Model": "718 Cayman",
@@ -976,7 +976,7 @@
       "id": 100
     }
   ]},
-  "Nissan": {"image":"./imgs/nissan.png",
+  "Nissan": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/nissan.png",
   "models":[
     {
       "Model": "Altima",
@@ -1014,7 +1014,7 @@
       "id": 95
     }
   ]},
-  "Mercedes-Benz": {"image":"./imgs/mercedes-benz.jpg",
+  "Mercedes-Benz": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/mercedes-benz.jpg",
   "models":[
     {
       "Model": "A-Class",
@@ -1052,7 +1052,7 @@
       "id": 90
     }
   ]},
-  "Maserati": {"image":"./imgs/maserati.png",
+  "Maserati": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/maserati.png",
   "models":[
     {
       "Model": "Levante",
@@ -1090,7 +1090,7 @@
       "id": 85
     }
   ]},
-  "Volkswagen": {"image":"./imgs/volkswagen.png",
+  "Volkswagen": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/volkswagen.png",
   "models":[
     {
       "Model": "Golf",
