@@ -28,10 +28,12 @@ model Model {
 model User {
   id               String  @id @default(auto()) @map("_id") @db.ObjectId
   name             String
-  email            String  @unique
-  phone            String  @unique
+  email            String
+  phone            String
   verificationCode String
-  cars             Car[]  @relation("caar")  // One-to-many relationship: A user can have many cars
+  cars             Car[]  @relation("caar")
+  @@unique([email])
+  @@unique([phone])
 }
 
 model Car {
