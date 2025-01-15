@@ -31,11 +31,11 @@ model User {
   email            String  @unique
   phone            String  @unique
   verificationCode String
-  cars             Car[]   // One-to-many relationship: A user can have many cars
+  cars             Car[]  @relation("caar")  // One-to-many relationship: A user can have many cars
 }
 
 model Car {
-  id            String  @id @map("_id") @default(auto()) @db.ObjectId
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
   brand         String
   model         String
   color         String
@@ -45,9 +45,9 @@ model Car {
   madeYear      String
   kilometers    String
   estmara       String?
-  fixes         Fix[]   // One-to-many relationship: A car can have many fixes
-  userId        String  // Foreign key to link the car to a user
-  user          User    @relation(fields: [userId], references: [id]) // Relationship definition
+  fixes         Fix[]
+  userId        String  @db.ObjectId // Foreign key for the relationship
+  user          User    @relation("caar",fields: [userId], references: [id]) // Define the relationship
 }
 
 
