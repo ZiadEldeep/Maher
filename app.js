@@ -438,7 +438,7 @@ app.get("/user/:id", async (req, res) => {
       })),
     };
 
-    res.status(200).json(userData);
+    res.status(201).json(userData);
   } catch (error) {
     console.error("Error fetching user data:", error);
     res.status(500).json({ message: "Error fetching user data", error: error.message });
