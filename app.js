@@ -29,13 +29,10 @@ const writeJSONFile = (data) => {
     console.error("Error writing JSON file:", error);
   }
 };
-
-// Route: Get all cars data
 app.get("/getCars", (req, res) => {
   const jsonData = readJSONFile();
   res.json({ message: "success", data: jsonData });
 });
-// Route: Get a specific car by ID
 app.get("/getCars/:id", (req, res) => {
   const { id } = req.params;
   const jsonData = readJSONFile();
@@ -56,7 +53,6 @@ app.get("/getCars/:id", (req, res) => {
     res.status(404).json({ message: "Car not found" });
   }
 });
-// Route: Get a specific car by brand and model
 app.get("/carBM", (req, res) => {
   const { brand, model } = req.query;  // Get brand and model from query parameters
   const jsonData = readJSONFile();
@@ -75,7 +71,6 @@ app.get("/carBM", (req, res) => {
     res.status(404).json({ message: "Car not found" });
   }
 });
-// Route: Show all users from the database
 app.get("/show", async (req, res) => {
   try {
     // Fetch all users from the database
@@ -94,7 +89,6 @@ app.get("/show", async (req, res) => {
     res.status(500).json({ message: "Error fetching users", error });
   }
 });
-// Route: Add a new registration
 app.post("/registerApi", async (req, res) => {
   const { name, email, phone} = req.body;
   
@@ -152,7 +146,6 @@ app.post("/registerApi", async (req, res) => {
     console.error(error);
   }
 });
-// Route: Login user
 app.post("/login", async (req, res) => {
   const { phone } = req.body;
 
@@ -242,14 +235,22 @@ app.post("/login", async (req, res) => {
 //   }
 // });
 app.post('/addCar', async (req, res) => {
-  const { brand, id2, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers ,estmara} = req.body;
+  const { userId, brand, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers, estmara } = req.body;
 
   try {
-    console.log(prisma);  // Log prisma to check if it's available
+    // Check if the user exists
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+    });
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Create a new car and associate it with the user
     const newCar = await prisma.car.create({
       data: {
         brand,
-        id2,
         model,
         color,
         fuelType,
@@ -258,15 +259,17 @@ app.post('/addCar', async (req, res) => {
         madeYear,
         kilometers,
         estmara,
+        userId,
       },
     });
 
-    res.json({ message: 'Car added successfully', car: newCar });
+    res.status(201).json({ message: 'Car added successfully', car: newCar });
   } catch (error) {
-    console.error('Error creating car:', error);
-    res.status(500).json({ message: 'Error saving car data', error: error.message });
+    console.error('Error adding car:', error);
+    res.status(500).json({ message: 'Error adding car', error: error.message });
   }
 });
+
 app.post("/fix", async (req, res) => {
   const { kilometers, lastFixDate, fix, rememberMe, morfaqat } = req.body;
 
@@ -328,9 +331,33 @@ app.delete('/deleteCar/:id', async (req, res) => {
     res.status(500).json({ message: 'Error deleting car', error: error.message });
   }
 });
+app.get('/getCar/:id', async (req, res) => {
+  const { id } = req.params;
 
-// api for get car by user id...
-// Start the server
+  try {
+    // Fetch car by ID
+    const car = await prisma.car.findUnique({
+      where: { id },
+    });
+
+    // If the car is not found
+    if (!car) {
+      return res.status(404).json({ message: 'Car not found' });
+    }
+
+    // Respond with the car data
+    res.status(200).json({ message: 'Car retrieved successfully', car });
+  } catch (error) {
+    console.error('Error fetching car by ID:', error);
+
+    // Handle invalid ObjectId format
+    if (error.code === 'P2025') {
+      res.status(404).json({ message: 'Car not found' });
+    } else {
+      res.status(500).json({ message: 'Error retrieving car data', error: error.message });
+    }
+  }
+});
 const PORT = 3999;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

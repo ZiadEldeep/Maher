@@ -7,13 +7,6 @@ datasource db {
   provider = "mongodb"
   url      = "mongodb+srv://ahmed15ayman7ahmed2002:poiuy123poiuy123@maher.bggyo.mongodb.net/maher?retryWrites=true&w=majority&appName=maher"
 }
-model User {
-  id               String   @id @default(auto()) @map("_id") @db.ObjectId
-  name             String
-  email            String   @unique
-  phone            String   @unique
-  verificationCode String
-}
 
 model Brand {
   id      String  @id @default(auto()) @map("_id") @db.ObjectId
@@ -32,6 +25,15 @@ model Model {
 }
 
 // schema.prisma
+model User {
+  id               String  @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  email            String  @unique
+  phone            String  @unique
+  verificationCode String
+  cars             Car[]   // One-to-many relationship: A user can have many cars
+}
+
 model Car {
   id            String  @id @map("_id") @default(auto()) @db.ObjectId
   brand         String
@@ -43,8 +45,11 @@ model Car {
   madeYear      String
   kilometers    String
   estmara       String?
-  fixes         Fix[]   
+  fixes         Fix[]   // One-to-many relationship: A car can have many fixes
+  userId        String  // Foreign key to link the car to a user
+  user          User    @relation(fields: [userId], references: [id]) // Relationship definition
 }
+
 
 model Fix {
   id            String   @id @map("_id") @default(auto()) @db.ObjectId
