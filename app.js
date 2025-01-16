@@ -197,8 +197,14 @@ app.post("/login", async (req, res) => {
       // Step 5: Send the email
       await transporter.sendMail(mailOptions);
       // Step 6: Respond with success
-      res.status(201).json({ message: "Verification code sent successfully" ,user:{...user,verificationCode}});
-    } else {
+      res.status(201).json({
+        message: "Verification code sent successfully",
+        user: {
+          ...user,
+          verificationCode: verificationCode.toString() // Convert to string
+        }
+      });
+          } else {
       // Step 7: Handle case where user is not found
       res.status(404).json({ message: "User not found" });
     }
@@ -208,32 +214,6 @@ app.post("/login", async (req, res) => {
     console.error(error);
   }
 });
-// Twilio credentials from the environment variables
-// const accountSid = process.env.TWILIO_ACCOUNT_SID;
-// const authToken = process.env.TWILIO_AUTH_TOKEN;
-// const client = twilio(accountSid, authToken);
-// API Endpoint to send verification code via WhatsApp
-// app.post("/verifiedwhtsp", async (req, res) => {
-//   const { phone } = req.body;
-
-//   // Generate a random 4-digit numeric verification code
-//   const verificationCode = Math.floor(1000 + Math.random() * 9000);
-
-//   try {
-//     // Send the verification code via WhatsApp using Twilio
-//     const message = await client.messages.create({
-//       from: process.env.TWILIO_WHATSAPP_NUMBER, // Your Twilio WhatsApp number
-//       to: `whatsapp:${phone}`, // The recipient's phone number
-//       body: `Your verification code is: ${verificationCode}`,
-//     });
-
-//     // Respond with success message
-//     res.json({ message: "success", verificationCode, whatsappMessageSid: message.sid });
-//   } catch (error) {
-//     res.status(500).json({ message: "Error sending WhatsApp message", error: error.message });
-//     console.error(error);
-//   }
-// });
 app.post('/addCar', async (req, res) => {
   const { userId, brand, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers, estmara, fixDescription } = req.body;
 
