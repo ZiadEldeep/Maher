@@ -444,7 +444,33 @@ app.get("/user/:id", async (req, res) => {
     res.status(500).json({ message: "Error fetching user data", error: error.message });
   }
 });
-const PORT = 3999;
+app.post("/address", async (req, res) => {
+  const { userId, address, type } = req.body;
+
+  // Validate input
+  if (!userId || !address || !type) {
+    return res.status(400).json({ error: "User ID, Address, and Type are required." });
+  }
+
+  try {
+    // Save the address in the database and associate it with the user
+    const newAddress = await prisma.address.create({
+      data: {
+        address,
+        type,
+        user: { connect: { id: userId } }, // Relate the address to the user via userId
+      },
+    });
+
+    res.status(201).json({
+      message: "Address saved successfully!",
+      data: newAddress,
+    });
+  } catch (error) {
+    console.error("Error saving address:", error);
+    res.status(500).json({ error: "Failed to save address." });
+  }
+});const PORT = 3999;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

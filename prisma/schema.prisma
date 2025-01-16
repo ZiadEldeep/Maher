@@ -32,6 +32,7 @@ model User {
   phone            String
   verificationCode String
   cars             Car[]  @relation("caar")
+  addresses        Address[]  @relation("address")
   @@unique([email])
   @@unique([phone])
 }
@@ -60,4 +61,12 @@ model Fix {
   createdAt     DateTime @default(now())
   carId         String   @db.ObjectId
   car           Car      @relation(fields: [carId], references: [id]) 
+}
+model Address {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  address   String
+  type      String
+  userId    String   @db.ObjectId
+  user      User     @relation("address",fields: [userId], references: [id])
+  createdAt DateTime @default(now())
 }
