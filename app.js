@@ -471,43 +471,29 @@ app.post("/address", async (req, res) => {
     res.status(500).json({ error: "Failed to save address." });
   }
 });
-// const fs = require('fs');
-// const path = require('path');
-// const cloudinary = require('./cloudinaryConfig'); // Import the Cloudinary configuration
+app.get('/getCarsByUser/:userId', async (req, res) => {
+  const { userId } = req.params;
 
-// Function to upload all images from a local folder to Cloudinary
-// async function uploadImagesFromFolder() {
-//   const folderPath = path.join(__dirname, 'imgs'); // Path to your 'imgs' folder
-  
-//   // Read all files from the folder
-//   fs.readdir(folderPath, (err, files) => {
-//     if (err) {
-//       console.log('Error reading folder:', err);
-//       return;
-//     }
+  try {
+    // Fetch cars associated with the userId
+    const cars = await prisma.car.findMany({
+      where: { userId },
+    });
 
-//     // Loop through each file in the folder
-//     files.forEach(async (file) => {
-//       const filePath = path.join(folderPath, file);
-      
-//       // Upload the image to Cloudinary
-//       try {
-//         const result = await cloudinary.uploader.upload(filePath, {
-//           public_id: `cars/${file}`, // Store it in a "cars" folder on Cloudinary
-//           resource_type: 'image',    // Define the resource type as image
-//           overwrite: true,           // Overwrite existing image with the same public_id
-//         });
+    // If no cars are found for the user
+    if (cars.length === 0) {
+      return res.status(404).json({ message: 'No cars found for the specified user' });
+    }
 
-//         console.log(`Uploaded ${file}: ${result.secure_url}`);
-//       } catch (error) {
-//         console.error(`Error uploading ${file}:`, error);
-//       }
-//     });
-//   });
-// }
+    // Respond with the cars data
+    res.status(200).json({ message: 'Cars retrieved successfully', cars });
+  } catch (error) {
+    console.error('Error fetching cars by user ID:', error);
 
-// Call the function to upload images
-// uploadImagesFromFolder();
+    // Handle errors
+    res.status(500).json({ message: 'Error retrieving cars data', error: error.message });
+  }
+});
 
 const PORT = 3999;
 app.listen(PORT, () => {
