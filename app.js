@@ -486,7 +486,7 @@ app.get('/getCarsByUser/:userId', async (req, res) => {
     }
 
     // Respond with the cars data
-    res.status(200).json({ message: 'Cars retrieved successfully', cars });
+    res.status(201).json({ message: 'Cars retrieved successfully', cars });
   } catch (error) {
     console.error('Error fetching cars by user ID:', error);
 
