@@ -473,41 +473,41 @@ app.post("/address", async (req, res) => {
 });
 // const fs = require('fs');
 // const path = require('path');
-const cloudinary = require('./cloudinaryConfig'); // Import the Cloudinary configuration
+// const cloudinary = require('./cloudinaryConfig'); // Import the Cloudinary configuration
 
 // Function to upload all images from a local folder to Cloudinary
-async function uploadImagesFromFolder() {
-  const folderPath = path.join(__dirname, 'imgs'); // Path to your 'imgs' folder
+// async function uploadImagesFromFolder() {
+//   const folderPath = path.join(__dirname, 'imgs'); // Path to your 'imgs' folder
   
-  // Read all files from the folder
-  fs.readdir(folderPath, (err, files) => {
-    if (err) {
-      console.log('Error reading folder:', err);
-      return;
-    }
+//   // Read all files from the folder
+//   fs.readdir(folderPath, (err, files) => {
+//     if (err) {
+//       console.log('Error reading folder:', err);
+//       return;
+//     }
 
-    // Loop through each file in the folder
-    files.forEach(async (file) => {
-      const filePath = path.join(folderPath, file);
+//     // Loop through each file in the folder
+//     files.forEach(async (file) => {
+//       const filePath = path.join(folderPath, file);
       
-      // Upload the image to Cloudinary
-      try {
-        const result = await cloudinary.uploader.upload(filePath, {
-          public_id: `cars/${file}`, // Store it in a "cars" folder on Cloudinary
-          resource_type: 'image',    // Define the resource type as image
-          overwrite: true,           // Overwrite existing image with the same public_id
-        });
+//       // Upload the image to Cloudinary
+//       try {
+//         const result = await cloudinary.uploader.upload(filePath, {
+//           public_id: `cars/${file}`, // Store it in a "cars" folder on Cloudinary
+//           resource_type: 'image',    // Define the resource type as image
+//           overwrite: true,           // Overwrite existing image with the same public_id
+//         });
 
-        console.log(`Uploaded ${file}: ${result.secure_url}`);
-      } catch (error) {
-        console.error(`Error uploading ${file}:`, error);
-      }
-    });
-  });
-}
+//         console.log(`Uploaded ${file}: ${result.secure_url}`);
+//       } catch (error) {
+//         console.error(`Error uploading ${file}:`, error);
+//       }
+//     });
+//   });
+// }
 
 // Call the function to upload images
-uploadImagesFromFolder();
+// uploadImagesFromFolder();
 
 const PORT = 3999;
 app.listen(PORT, () => {
