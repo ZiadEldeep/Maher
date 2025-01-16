@@ -264,13 +264,13 @@ app.post('/addCar', async (req, res) => {
     });
 
     // Create a fix record for the new car
-    const newFix = await prisma.fix.create({
-      data: {
-        description: fixDescription,  // Description of the fix
-        date: new Date(),  // Date of the fix
-        carId: newCar.id,  // Linking fix to the car by carId
-      },
-    });
+    // const newFix = await prisma.fix.create({
+    //   data: {
+    //     description: fixDescription,  // Description of the fix
+    //     date: new Date(),  // Date of the fix
+    //     carId: newCar.id,  // Linking fix to the car by carId
+    //   },
+    // });
 
     // Return the updated user data with the associated cars (including the new car)
     const updatedUser = await prisma.user.findUnique({
@@ -283,7 +283,7 @@ app.post('/addCar', async (req, res) => {
     res.status(201).json({
       message: 'Car and fix added successfully',
       car: newCar,
-      fix: newFix,
+      // fix: newFix,
       user: updatedUser, // Include the updated user with car IDs
     });
   } catch (error) {
