@@ -2,77 +2,77 @@
  "Bugatti": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/Bugatti.jpg",
  "models":[
   {
-    "Model": "Veyron",
+    "model": "Veyron",
     "wheelbase_Length_mm": 2600,
     "front_Wheel_Size_inches": "20x8",
     "rear_Wheel_Size_inches": "20x8",
     "id": 1
   },
   {
-    "Model": "Chiron",
+    "model": "Chiron",
     "wheelbase_Length_mm": 2710,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 2
   },
   {
-    "Model": "Divo",
+    "model": "Divo",
     "wheelbase_Length_mm": 2650,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 3
   },
   {
-    "Model": "Centodieci",
+    "model": "Centodieci",
     "wheelbase_Length_mm": 2640,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x9",
     "id": 4
   },
   {
-    "Model": "Bolide",
+    "model": "Bolide",
     "wheelbase_Length_mm": 2500,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 5
   },
   {
-    "Model": "La Voiture Noire",
+    "model": "La Voiture Noire",
     "wheelbase_Length_mm": 2710,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 6
   },
   {
-    "Model": "Veyron 16.4 Super Sport",
+    "model": "Veyron 16.4 Super Sport",
     "wheelbase_Length_mm": 2600,
     "front_Wheel_Size_inches": "20x8",
     "rear_Wheel_Size_inches": "20x8",
     "id": 7
   },
   {
-    "Model": "Chiron Pur Sport",
+    "model": "Chiron Pur Sport",
     "wheelbase_Length_mm": 2710,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 8
   },
   {
-    "Model": "Chiron Sport",
+    "model": "Chiron Sport",
     "wheelbase_Length_mm": 2710,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 9
   },
   {
-    "Model": "Chiron Super Sport 300+",
+    "model": "Chiron Super Sport 300+",
     "wheelbase_Length_mm": 2710,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 10
   },
   {
-    "Model": "Chiron Noire",
+    "model": "Chiron Noire",
     "wheelbase_Length_mm": 2710,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
@@ -82,70 +82,70 @@
   "Acura": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/acura.jpg",
   "models":[
   {
-    "Model": "MDX",
+    "model": "MDX",
     "wheelbase_Length_mm": 2800,
     "front_Wheel_Size_inches": "18x8",
     "rear_Wheel_Size_inches": "18x9",
     "id": 12
   },
   {
-    "Model": "RDX",
+    "model": "RDX",
     "wheelbase_Length_mm": 2600,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x7.5",
     "id": 13
   },
   {
-    "Model": "TLX",
+    "model": "TLX",
     "wheelbase_Length_mm": 2800,
     "front_Wheel_Size_inches": "19x8",
     "rear_Wheel_Size_inches": "19x9",
     "id": 14
   },
   {
-    "Model": "ILX",
+    "model": "ILX",
     "wheelbase_Length_mm": 2670,
     "front_Wheel_Size_inches": "17x7",
     "rear_Wheel_Size_inches": "17x7",
     "id": 15
   },
   {
-    "Model": "NSX",
+    "model": "NSX",
     "wheelbase_Length_mm": 2600,
     "front_Wheel_Size_inches": "19x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 16
   },
   {
-    "Model": "ZDX",
+    "model": "ZDX",
     "wheelbase_Length_mm": 2950,
     "front_Wheel_Size_inches": "20x8",
     "rear_Wheel_Size_inches": "20x9",
     "id": 17
   },
   {
-    "Model": "RLX",
+    "model": "RLX",
     "wheelbase_Length_mm": 2900,
     "front_Wheel_Size_inches": "19x8",
     "rear_Wheel_Size_inches": "19x9",
     "id": 18
   },
   {
-    "Model": "TL",
+    "model": "TL",
     "wheelbase_Length_mm": 2700,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x8",
     "id": 19
   },
   {
-    "Model": "CL",
+    "model": "CL",
     "wheelbase_Length_mm": 2670,
     "front_Wheel_Size_inches": "17x7.5",
     "rear_Wheel_Size_inches": "17x7.5",
     "id": 20
   },
   {
-    "Model": "Integra",
+    "model": "Integra",
     "wheelbase_Length_mm": 2700,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x7.5",
@@ -155,49 +155,49 @@
   "Alfa Romeo": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/alfa-romeo.jpg",
   "models":[
   {
-    "Model": "Giulia",
+    "model": "Giulia",
     "wheelbase_Length_mm": 2820,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x8",
     "id": 21
   },
   {
-    "Model": "Stelvio",
+    "model": "Stelvio",
     "wheelbase_Length_mm": 2890,
     "front_Wheel_Size_inches": "19x8",
     "rear_Wheel_Size_inches": "19x9",
     "id": 22
   },
   {
-    "Model": "4C",
+    "model": "4C",
     "wheelbase_Length_mm": 2350,
     "front_Wheel_Size_inches": "17x7.5",
     "rear_Wheel_Size_inches": "17x7.5",
     "id": 23
   },
   {
-    "Model": "Spider",
+    "model": "Spider",
     "wheelbase_Length_mm": 2420,
     "front_Wheel_Size_inches": "17x7.5",
     "rear_Wheel_Size_inches": "17x8",
     "id": 24
   },
   {
-    "Model": "Giulietta",
+    "model": "Giulietta",
     "wheelbase_Length_mm": 2520,
     "front_Wheel_Size_inches": "17x7.5",
     "rear_Wheel_Size_inches": "17x7.5",
     "id": 25
   },
   {
-    "Model": "Tonale",
+    "model": "Tonale",
     "wheelbase_Length_mm": 2630,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x8",
     "id": 26
   },
   {
-    "Model": "Mito",
+    "model": "Mito",
     "wheelbase_Length_mm": 2510,
     "front_Wheel_Size_inches": "17x7",
     "rear_Wheel_Size_inches": "17x7",
@@ -207,56 +207,56 @@
   "Aston Martin": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/Aston-Martin.jpg",
   "models":[
   {
-    "Model": "DB11",
+    "model": "DB11",
     "wheelbase_Length_mm": 2850,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 28
   },
   {
-    "Model": "Vantage",
+    "model": "Vantage",
     "wheelbase_Length_mm": 2710,
     "front_Wheel_Size_inches": "19x8",
     "rear_Wheel_Size_inches": "19x9",
     "id": 29
   },
   {
-    "Model": "Rapide",
+    "model": "Rapide",
     "wheelbase_Length_mm": 2890,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 30
   },
   {
-    "Model": "Vanquish",
+    "model": "Vanquish",
     "wheelbase_Length_mm": 2690,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 31
   },
   {
-    "Model": "DBS",
+    "model": "DBS",
     "wheelbase_Length_mm": 2800,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x9",
     "id": 32
   },
   {
-    "Model": "DBX",
+    "model": "DBX",
     "wheelbase_Length_mm": 3060,
     "front_Wheel_Size_inches": "22x9",
     "rear_Wheel_Size_inches": "22x10",
     "id": 33
   },
   {
-    "Model": "One-77",
+    "model": "One-77",
     "wheelbase_Length_mm": 2700,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 34
   },
   {
-    "Model": "Vulcan",
+    "model": "Vulcan",
     "wheelbase_Length_mm": 2760,
     "front_Wheel_Size_inches": "18x8.5",
     "rear_Wheel_Size_inches": "18x9.5",
@@ -266,70 +266,70 @@
   "Audi": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/audi.png",
   "models":[
   {
-    "Model": "TT",
+    "model": "TT",
     "wheelbase_Length_mm": 2500,
     "front_Wheel_Size_inches": "18x7",
     "rear_Wheel_Size_inches": "18x8",
     "id": 36
   },
   {
-    "Model": "R8",
+    "model": "R8",
     "wheelbase_Length_mm": 2650,
     "front_Wheel_Size_inches": "19x8",
     "rear_Wheel_Size_inches": "19x9",
     "id": 37
   },
   {
-    "Model": "e-tron",
+    "model": "e-tron",
     "wheelbase_Length_mm": 2800,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 38
   },
   {
-    "Model": "A1",
+    "model": "A1",
     "wheelbase_Length_mm": 2460,
     "front_Wheel_Size_inches": "16x7",
     "rear_Wheel_Size_inches": "16x7",
     "id": 39
   },
   {
-    "Model": "A3",
+    "model": "A3",
     "wheelbase_Length_mm": 2590,
     "front_Wheel_Size_inches": "17x7",
     "rear_Wheel_Size_inches": "17x7",
     "id": 40
   },
   {
-    "Model": "A4",
+    "model": "A4",
     "wheelbase_Length_mm": 2810,
     "front_Wheel_Size_inches": "18x8",
     "rear_Wheel_Size_inches": "18x8.5",
     "id": 41
   },
   {
-    "Model": "A5",
+    "model": "A5",
     "wheelbase_Length_mm": 2820,
     "front_Wheel_Size_inches": "19x8",
     "rear_Wheel_Size_inches": "19x9",
     "id": 42
   },
   {
-    "Model": "Q7",
+    "model": "Q7",
     "wheelbase_Length_mm": 2990,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 43
   },
   {
-    "Model": "Q5",
+    "model": "Q5",
     "wheelbase_Length_mm": 2810,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x8",
     "id": 44
   },
   {
-    "Model": "Q8",
+    "model": "Q8",
     "wheelbase_Length_mm": 2995,
     "front_Wheel_Size_inches": "21x9",
     "rear_Wheel_Size_inches": "21x9",
@@ -339,70 +339,70 @@
   "BMW": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/bmw.png",
   "models":[
   {
-    "Model": "Z4",
+    "model": "Z4",
     "wheelbase_Length_mm": 2470,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x8",
     "id": 46
   },
   {
-    "Model": "X6",
+    "model": "X6",
     "wheelbase_Length_mm": 2940,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 47
   },
   {
-    "Model": "X7",
+    "model": "X7",
     "wheelbase_Length_mm": 3105,
     "front_Wheel_Size_inches": "21x9",
     "rear_Wheel_Size_inches": "21x9",
     "id": 48
   },
   {
-    "Model": "i8",
+    "model": "i8",
     "wheelbase_Length_mm": 2450,
     "front_Wheel_Size_inches": "20x8",
     "rear_Wheel_Size_inches": "20x9",
     "id": 49
   },
   {
-    "Model": "X5",
+    "model": "X5",
     "wheelbase_Length_mm": 2935,
     "front_Wheel_Size_inches": "19x8.5",
     "rear_Wheel_Size_inches": "19x9",
     "id": 50
   },
   {
-    "Model": "3 Series",
+    "model": "3 Series",
     "wheelbase_Length_mm": 2810,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x8",
     "id": 51
   },
   {
-    "Model": "5 Series",
+    "model": "5 Series",
     "wheelbase_Length_mm": 2960,
     "front_Wheel_Size_inches": "19x8.5",
     "rear_Wheel_Size_inches": "19x9",
     "id": 52
   },
   {
-    "Model": "7 Series",
+    "model": "7 Series",
     "wheelbase_Length_mm": 3210,
     "front_Wheel_Size_inches": "20x8.5",
     "rear_Wheel_Size_inches": "20x9",
     "id": 53
   },
   {
-    "Model": "M3",
+    "model": "M3",
     "wheelbase_Length_mm": 2810,
     "front_Wheel_Size_inches": "18x8",
     "rear_Wheel_Size_inches": "18x8.5",
     "id": 54
   },
   {
-    "Model": "M5",
+    "model": "M5",
     "wheelbase_Length_mm": 2950,
     "front_Wheel_Size_inches": "19x8.5",
     "rear_Wheel_Size_inches": "19x9.5",
@@ -412,35 +412,35 @@
   "Bentley": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/bentley.png",
   "models":[
   {
-    "Model": "Continental GT",
+    "model": "Continental GT",
     "wheelbase_Length_mm": 2850,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 56
   },
   {
-    "Model": "Bentayga",
+    "model": "Bentayga",
     "wheelbase_Length_mm": 2990,
     "front_Wheel_Size_inches": "22x9",
     "rear_Wheel_Size_inches": "22x10",
     "id": 57
   },
   {
-    "Model": "Flying Spur",
+    "model": "Flying Spur",
     "wheelbase_Length_mm": 3100,
     "front_Wheel_Size_inches": "21x9",
     "rear_Wheel_Size_inches": "21x10",
     "id": 58
   },
   {
-    "Model": "Mulsanne",
+    "model": "Mulsanne",
     "wheelbase_Length_mm": 3360,
     "front_Wheel_Size_inches": "21x9",
     "rear_Wheel_Size_inches": "21x10",
     "id": 59
   },
   {
-    "Model": "Azure",
+    "model": "Azure",
     "wheelbase_Length_mm": 3070,
     "front_Wheel_Size_inches": "21x9",
     "rear_Wheel_Size_inches": "21x10",
@@ -450,35 +450,35 @@
   "Cadillac": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/cadillac.png",
   "models":[
   {
-    "Model": "Escalade",
+    "model": "Escalade",
     "wheelbase_Length_mm": 3070,
     "front_Wheel_Size_inches": "22x9",
     "rear_Wheel_Size_inches": "22x10",
     "id": 61
   },
   {
-    "Model": "CTS",
+    "model": "CTS",
     "wheelbase_Length_mm": 2870,
     "front_Wheel_Size_inches": "18x8",
     "rear_Wheel_Size_inches": "18x9",
     "id": 62
   },
   {
-    "Model": "XT5",
+    "model": "XT5",
     "wheelbase_Length_mm": 2800,
     "front_Wheel_Size_inches": "19x8",
     "rear_Wheel_Size_inches": "19x8",
     "id": 63
   },
   {
-    "Model": "ATS",
+    "model": "ATS",
     "wheelbase_Length_mm": 2750,
     "front_Wheel_Size_inches": "18x7.5",
     "rear_Wheel_Size_inches": "18x7.5",
     "id": 64
   },
   {
-    "Model": "CT6",
+    "model": "CT6",
     "wheelbase_Length_mm": 2900,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x9",
@@ -488,70 +488,70 @@
   "Chevrolet": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/chevrolet.jpg",
   "models":[
     {
-      "Model": "Blazer",
+      "model": "Blazer",
       "wheelbase_Length_mm": 2800,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x8",
       "id": 66
     },
     {
-      "Model": "Trailblazer",
+      "model": "Trailblazer",
       "wheelbase_Length_mm": 2650,
       "front_Wheel_Size_inches": "18x7.5",
       "rear_Wheel_Size_inches": "18x7.5",
       "id": 67
     },
     {
-      "Model": "Colorado",
+      "model": "Colorado",
       "wheelbase_Length_mm": 2850,
       "front_Wheel_Size_inches": "18x8",
       "rear_Wheel_Size_inches": "18x8",
       "id": 68
     },
     {
-      "Model": "Equinox",
+      "model": "Equinox",
       "wheelbase_Length_mm": 2700,
       "front_Wheel_Size_inches": "18x7.5",
       "rear_Wheel_Size_inches": "18x8",
       "id": 69
     },
     {
-      "Model": "Traverse",
+      "model": "Traverse",
       "wheelbase_Length_mm": 3000,
       "front_Wheel_Size_inches": "20x8.5",
       "rear_Wheel_Size_inches": "20x9",
       "id": 70
     },
     {
-      "Model": "Aveo",
+      "model": "Aveo",
       "wheelbase_Length_mm": 2525,
       "front_Wheel_Size_inches": "15x6",
       "rear_Wheel_Size_inches": "15x6",
       "id": 71
     },
     {
-      "Model": "Optra",
+      "model": "Optra",
       "wheelbase_Length_mm": 2640,
       "front_Wheel_Size_inches": "15x6.5",
       "rear_Wheel_Size_inches": "15x6.5",
       "id": 72
     },
     {
-      "Model": "Cruze",
+      "model": "Cruze",
       "wheelbase_Length_mm": 2700,
       "front_Wheel_Size_inches": "16x7",
       "rear_Wheel_Size_inches": "16x7",
       "id": 73
     },
     {
-      "Model": "Spark",
+      "model": "Spark",
       "wheelbase_Length_mm": 2375,
       "front_Wheel_Size_inches": "14x5.5",
       "rear_Wheel_Size_inches": "14x5.5",
       "id": 74
     },
     {
-      "Model": "Malibu",
+      "model": "Malibu",
       "wheelbase_Length_mm": 2735,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
@@ -561,35 +561,35 @@
   "Dodge": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/dodge.png",
   "models":[
   {
-    "Model": "Charger",
+    "model": "Charger",
     "wheelbase_Length_mm": 2950,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 76
   },
   {
-    "Model": "Challenger",
+    "model": "Challenger",
     "wheelbase_Length_mm": 2890,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 77
   },
   {
-    "Model": "Durango",
+    "model": "Durango",
     "wheelbase_Length_mm": 3050,
     "front_Wheel_Size_inches": "20x9",
     "rear_Wheel_Size_inches": "20x10",
     "id": 78
   },
   {
-    "Model": "Ram 1500",
+    "model": "Ram 1500",
     "wheelbase_Length_mm": 3530,
     "front_Wheel_Size_inches": "20x8",
     "rear_Wheel_Size_inches": "20x8",
     "id": 79
   },
   {
-    "Model": "Grand Caravan",
+    "model": "Grand Caravan",
     "wheelbase_Length_mm": 3030,
     "front_Wheel_Size_inches": "17x7",
     "rear_Wheel_Size_inches": "17x7",
@@ -599,35 +599,35 @@
   "Ford": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/ford.png",
   "models":[
     {
-      "Model": "Mustang",
+      "model": "Mustang",
       "wheelbase_Length_mm": 2720,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 51
     },
     {
-      "Model": "F-150",
+      "model": "F-150",
       "wheelbase_Length_mm": 3350,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x9",
       "id": 52
     },
     {
-      "Model": "Explorer",
+      "model": "Explorer",
       "wheelbase_Length_mm": 2850,
       "front_Wheel_Size_inches": "20x8",
       "rear_Wheel_Size_inches": "20x9",
       "id": 53
     },
     {
-      "Model": "Edge",
+      "model": "Edge",
       "wheelbase_Length_mm": 2850,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 54
     },
     {
-      "Model": "Escape",
+      "model": "Escape",
       "wheelbase_Length_mm": 2670,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x8",
@@ -637,35 +637,35 @@
   "Honda": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/honda.png",
   "models":[
     {
-      "Model": "Accord",
+      "model": "Accord",
       "wheelbase_Length_mm": 2830,
       "front_Wheel_Size_inches": "18x7.5",
       "rear_Wheel_Size_inches": "18x8",
       "id": 56
     },
     {
-      "Model": "Civic",
+      "model": "Civic",
       "wheelbase_Length_mm": 2700,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
       "id": 57
     },
     {
-      "Model": "Pilot",
+      "model": "Pilot",
       "wheelbase_Length_mm": 2890,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 58
     },
     {
-      "Model": "CR-V",
+      "model": "CR-V",
       "wheelbase_Length_mm": 2660,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x8",
       "id": 59
     },
     {
-      "Model": "Ridgeline",
+      "model": "Ridgeline",
       "wheelbase_Length_mm": 3090,
       "front_Wheel_Size_inches": "18x8",
       "rear_Wheel_Size_inches": "18x8",
@@ -675,35 +675,35 @@
   "Hyundai": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/hyundai.png",
   "models":[
     {
-      "Model": "Sonata",
+      "model": "Sonata",
       "wheelbase_Length_mm": 2800,
       "front_Wheel_Size_inches": "18x7.5",
       "rear_Wheel_Size_inches": "18x8",
       "id": 61
     },
     {
-      "Model": "Elantra",
+      "model": "Elantra",
       "wheelbase_Length_mm": 2700,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
       "id": 62
     },
     {
-      "Model": "Santa Fe",
+      "model": "Santa Fe",
       "wheelbase_Length_mm": 2850,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 63
     },
     {
-      "Model": "Tucson",
+      "model": "Tucson",
       "wheelbase_Length_mm": 2670,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x8",
       "id": 64
     },
     {
-      "Model": "Kona",
+      "model": "Kona",
       "wheelbase_Length_mm": 2600,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
@@ -713,35 +713,35 @@
   "Jaguar": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/jaguar.png",
   "models":[
     {
-      "Model": "F-Pace",
+      "model": "F-Pace",
       "wheelbase_Length_mm": 2870,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 66
     },
     {
-      "Model": "XE",
+      "model": "XE",
       "wheelbase_Length_mm": 2835,
       "front_Wheel_Size_inches": "18x7.5",
       "rear_Wheel_Size_inches": "18x8",
       "id": 67
     },
     {
-      "Model": "XF",
+      "model": "XF",
       "wheelbase_Length_mm": 2950,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 68
     },
     {
-      "Model": "I-Pace",
+      "model": "I-Pace",
       "wheelbase_Length_mm": 2900,
       "front_Wheel_Size_inches": "20x8",
       "rear_Wheel_Size_inches": "20x10",
       "id": 69
     },
     {
-      "Model": "F-Type",
+      "model": "F-Type",
       "wheelbase_Length_mm": 2620,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x10",
@@ -751,35 +751,35 @@
   "Kia": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/kia.jpg",
   "models":[
     {
-      "Model": "Sorento",
+      "model": "Sorento",
       "wheelbase_Length_mm": 2800,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 71
     },
     {
-      "Model": "Sportage",
+      "model": "Sportage",
       "wheelbase_Length_mm": 2670,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x8",
       "id": 72
     },
     {
-      "Model": "Telluride",
+      "model": "Telluride",
       "wheelbase_Length_mm": 2900,
       "front_Wheel_Size_inches": "20x8",
       "rear_Wheel_Size_inches": "20x9",
       "id": 73
     },
     {
-      "Model": "Forte",
+      "model": "Forte",
       "wheelbase_Length_mm": 2700,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
       "id": 74
     },
     {
-      "Model": "Seltos",
+      "model": "Seltos",
       "wheelbase_Length_mm": 2630,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
@@ -789,35 +789,35 @@
   "Lexus": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/lexus.jpg",
   "models":[
     {
-      "Model": "RX",
+      "model": "RX",
       "wheelbase_Length_mm": 2790,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 76
     },
     {
-      "Model": "ES",
+      "model": "ES",
       "wheelbase_Length_mm": 2820,
       "front_Wheel_Size_inches": "18x8",
       "rear_Wheel_Size_inches": "18x9",
       "id": 77
     },
     {
-      "Model": "NX",
+      "model": "NX",
       "wheelbase_Length_mm": 2660,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x8",
       "id": 78
     },
     {
-      "Model": "LS",
+      "model": "LS",
       "wheelbase_Length_mm": 3125,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x10",
       "id": 79
     },
     {
-      "Model": "LC",
+      "model": "LC",
       "wheelbase_Length_mm": 2870,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x10",
@@ -827,35 +827,35 @@
   "Toyota": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/toyota.png",
   "models":[
     {
-      "Model": "Highlander",
+      "model": "Highlander",
       "wheelbase_Length_mm": 2850,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 111
     },
     {
-      "Model": "RAV4",
+      "model": "RAV4",
       "wheelbase_Length_mm": 2690,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x7",
       "id": 112
     },
     {
-      "Model": "Land Cruiser",
+      "model": "Land Cruiser",
       "wheelbase_Length_mm": 2850,
       "front_Wheel_Size_inches": "18x8",
       "rear_Wheel_Size_inches": "18x8",
       "id": 113
     },
     {
-      "Model": "Camry",
+      "model": "Camry",
       "wheelbase_Length_mm": 2825,
       "front_Wheel_Size_inches": "18x7.5",
       "rear_Wheel_Size_inches": "18x8",
       "id": 114
     },
     {
-      "Model": "Corolla",
+      "model": "Corolla",
       "wheelbase_Length_mm": 2700,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
@@ -865,35 +865,35 @@
   "Subaru": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/subaru.png",
   "models":[
     {
-      "Model": "Outback",
+      "model": "Outback",
       "wheelbase_Length_mm": 2730,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x8",
       "id": 106
     },
     {
-      "Model": "Forester",
+      "model": "Forester",
       "wheelbase_Length_mm": 2630,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
       "id": 107
     },
     {
-      "Model": "Ascent",
+      "model": "Ascent",
       "wheelbase_Length_mm": 2850,
       "front_Wheel_Size_inches": "20x8",
       "rear_Wheel_Size_inches": "20x8",
       "id": 108
     },
     {
-      "Model": "Crosstrek",
+      "model": "Crosstrek",
       "wheelbase_Length_mm": 2670,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x7",
       "id": 109
     },
     {
-      "Model": "Impreza",
+      "model": "Impreza",
       "wheelbase_Length_mm": 2650,
       "front_Wheel_Size_inches": "16x7",
       "rear_Wheel_Size_inches": "16x7",
@@ -903,35 +903,35 @@
   "Rolls-Royce": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/rolls-royce.jpg",
   "models":[
     {
-      "Model": "Phantom",
+      "model": "Phantom",
       "wheelbase_Length_mm": 3355,
       "front_Wheel_Size_inches": "21x9.5",
       "rear_Wheel_Size_inches": "21x10",
       "id": 101
     },
     {
-      "Model": "Cullinan",
+      "model": "Cullinan",
       "wheelbase_Length_mm": 3300,
       "front_Wheel_Size_inches": "22x9",
       "rear_Wheel_Size_inches": "22x10",
       "id": 102
     },
     {
-      "Model": "Dawn",
+      "model": "Dawn",
       "wheelbase_Length_mm": 3250,
       "front_Wheel_Size_inches": "21x9",
       "rear_Wheel_Size_inches": "21x10",
       "id": 103
     },
     {
-      "Model": "Wraith",
+      "model": "Wraith",
       "wheelbase_Length_mm": 3200,
       "front_Wheel_Size_inches": "21x9",
       "rear_Wheel_Size_inches": "21x10",
       "id": 104
     },
     {
-      "Model": "Ghost",
+      "model": "Ghost",
       "wheelbase_Length_mm": 3450,
       "front_Wheel_Size_inches": "21x9",
       "rear_Wheel_Size_inches": "21x10",
@@ -941,35 +941,35 @@
   "Porsche": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/porsche.png",
   "models":[
     {
-      "Model": "718 Cayman",
+      "model": "718 Cayman",
       "wheelbase_Length_mm": 2470,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 96
     },
     {
-      "Model": "Panamera",
+      "model": "Panamera",
       "wheelbase_Length_mm": 2950,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x10",
       "id": 97
     },
     {
-      "Model": "911",
+      "model": "911",
       "wheelbase_Length_mm": 2450,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 98
     },
     {
-      "Model": "Taycan",
+      "model": "Taycan",
       "wheelbase_Length_mm": 2900,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x10",
       "id": 99
     },
     {
-      "Model": "Cayenne",
+      "model": "Cayenne",
       "wheelbase_Length_mm": 2890,
       "front_Wheel_Size_inches": "21x9",
       "rear_Wheel_Size_inches": "21x10",
@@ -979,35 +979,35 @@
   "Nissan": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/nissan.png",
   "models":[
     {
-      "Model": "Altima",
+      "model": "Altima",
       "wheelbase_Length_mm": 2775,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x7",
       "id": 91
     },
     {
-      "Model": "Pathfinder",
+      "model": "Pathfinder",
       "wheelbase_Length_mm": 2900,
       "front_Wheel_Size_inches": "20x8",
       "rear_Wheel_Size_inches": "20x8",
       "id": 92
     },
     {
-      "Model": "Rogue",
+      "model": "Rogue",
       "wheelbase_Length_mm": 2705,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x7",
       "id": 93
     },
     {
-      "Model": "Frontier",
+      "model": "Frontier",
       "wheelbase_Length_mm": 2830,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 94
     },
     {
-      "Model": "Sentra",
+      "model": "Sentra",
       "wheelbase_Length_mm": 2650,
       "front_Wheel_Size_inches": "16x7",
       "rear_Wheel_Size_inches": "16x7",
@@ -1017,35 +1017,35 @@
   "Mercedes-Benz": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/mercedes-benz.jpg",
   "models":[
     {
-      "Model": "A-Class",
+      "model": "A-Class",
       "wheelbase_Length_mm": 2720,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
       "id": 86
     },
     {
-      "Model": "C-Class",
+      "model": "C-Class",
       "wheelbase_Length_mm": 2840,
       "front_Wheel_Size_inches": "18x8",
       "rear_Wheel_Size_inches": "18x9",
       "id": 87
     },
     {
-      "Model": "E-Class",
+      "model": "E-Class",
       "wheelbase_Length_mm": 2940,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 88
     },
     {
-      "Model": "GLC",
+      "model": "GLC",
       "wheelbase_Length_mm": 2870,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 89
     },
     {
-      "Model": "S-Class",
+      "model": "S-Class",
       "wheelbase_Length_mm": 3165,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x10",
@@ -1055,35 +1055,35 @@
   "Maserati": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/maserati.png",
   "models":[
     {
-      "Model": "Levante",
+      "model": "Levante",
       "wheelbase_Length_mm": 3000,
       "front_Wheel_Size_inches": "21x9",
       "rear_Wheel_Size_inches": "21x10",
       "id": 81
     },
     {
-      "Model": "Ghibli",
+      "model": "Ghibli",
       "wheelbase_Length_mm": 2920,
       "front_Wheel_Size_inches": "20x8",
       "rear_Wheel_Size_inches": "20x9",
       "id": 82
     },
     {
-      "Model": "Quattroporte",
+      "model": "Quattroporte",
       "wheelbase_Length_mm": 3171,
       "front_Wheel_Size_inches": "21x9",
       "rear_Wheel_Size_inches": "21x10",
       "id": 83
     },
     {
-      "Model": "GranTurismo",
+      "model": "GranTurismo",
       "wheelbase_Length_mm": 2670,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 84
     },
     {
-      "Model": "MC20",
+      "model": "MC20",
       "wheelbase_Length_mm": 2600,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x10",
@@ -1093,140 +1093,140 @@
   "Volkswagen": {"image":"https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/volkswagen.png",
   "models":[
     {
-      "Model": "Golf",
+      "model": "Golf",
       "wheelbase_Length_mm": 2630,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x8",
       "id": 116
     },
     {
-      "Model": "Passat",
+      "model": "Passat",
       "wheelbase_Length_mm": 2790,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x8",
       "id": 117
     },
     {
-      "Model": "Tiguan",
+      "model": "Tiguan",
       "wheelbase_Length_mm": 2670,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x8",
       "id": 118
     },
     {
-      "Model": "Atlas",
+      "model": "Atlas",
       "wheelbase_Length_mm": 2980,
       "front_Wheel_Size_inches": "20x8",
       "rear_Wheel_Size_inches": "20x9",
       "id": 119
     },
     {
-      "Model": "Jetta",
+      "model": "Jetta",
       "wheelbase_Length_mm": 2640,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
       "id": 120
     },
     {
-      "Model": "Beetle",
+      "model": "Beetle",
       "wheelbase_Length_mm": 2537,
       "front_Wheel_Size_inches": "16x7",
       "rear_Wheel_Size_inches": "16x8",
       "id": 121
     },
     {
-      "Model": "Arteon",
+      "model": "Arteon",
       "wheelbase_Length_mm": 2835,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x9",
       "id": 122
     },
     {
-      "Model": "ID.4",
+      "model": "ID.4",
       "wheelbase_Length_mm": 2771,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x8",
       "id": 123
     },
     {
-      "Model": "ID.3",
+      "model": "ID.3",
       "wheelbase_Length_mm": 2765,
       "front_Wheel_Size_inches": "18x7",
       "rear_Wheel_Size_inches": "18x7",
       "id": 124
     },
     {
-      "Model": "Touareg",
+      "model": "Touareg",
       "wheelbase_Length_mm": 2904,
       "front_Wheel_Size_inches": "20x9",
       "rear_Wheel_Size_inches": "20x9",
       "id": 125
     },
     {
-      "Model": "Polo",
+      "model": "Polo",
       "wheelbase_Length_mm": 2564,
       "front_Wheel_Size_inches": "16x7",
       "rear_Wheel_Size_inches": "16x7",
       "id": 126
     },
     {
-      "Model": "T-Cross",
+      "model": "T-Cross",
       "wheelbase_Length_mm": 2651,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
       "id": 127
     },
     {
-      "Model": "T-Roc",
+      "model": "T-Roc",
       "wheelbase_Length_mm": 2590,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x7",
       "id": 128
     },
     {
-      "Model": "Caddy",
+      "model": "Caddy",
       "wheelbase_Length_mm": 2755,
       "front_Wheel_Size_inches": "16x7",
       "rear_Wheel_Size_inches": "16x7",
       "id": 129
     },
     {
-      "Model": "Transporter",
+      "model": "Transporter",
       "wheelbase_Length_mm": 3000,
       "front_Wheel_Size_inches": "17x8",
       "rear_Wheel_Size_inches": "17x8",
       "id": 130
     },
     {
-      "Model": "Multivan",
+      "model": "Multivan",
       "wheelbase_Length_mm": 3300,
       "front_Wheel_Size_inches": "18x8",
       "rear_Wheel_Size_inches": "18x8",
       "id": 131
     },
     {
-      "Model": "Sharan",
+      "model": "Sharan",
       "wheelbase_Length_mm": 2920,
       "front_Wheel_Size_inches": "17x7",
       "rear_Wheel_Size_inches": "17x8",
       "id": 132
     },
     {
-      "Model": "Amarok",
+      "model": "Amarok",
       "wheelbase_Length_mm": 3097,
       "front_Wheel_Size_inches": "19x8",
       "rear_Wheel_Size_inches": "19x8",
       "id": 133
     },
     {
-      "Model": "Fox",
+      "model": "Fox",
       "wheelbase_Length_mm": 2465,
       "front_Wheel_Size_inches": "14x6",
       "rear_Wheel_Size_inches": "14x6",
       "id": 134
     },
     {
-      "Model": "Scirocco",
+      "model": "Scirocco",
       "wheelbase_Length_mm": 2578,
       "front_Wheel_Size_inches": "18x8",
       "rear_Wheel_Size_inches": "18x9",
