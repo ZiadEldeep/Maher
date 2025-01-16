@@ -281,7 +281,7 @@ app.post('/addCar', async (req, res) => {
     });
 
     res.status(201).json({
-      message: 'Car and fix added successfullyy',
+      message: 'Car and fix added successfully',
       car: newCar,
       // fix: newFix,
       user: updatedUser, // Include the updated user with car IDs
