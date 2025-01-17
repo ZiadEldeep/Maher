@@ -78,7 +78,7 @@ app.get("/show", async (req, res) => {
     }
 
     // Return success response with users
-    res.json({ message: "success", users });
+    res.json({ message: "success", users,userid });
   } catch (error) {
     // Log and return error response
     console.error("Error fetching users:", error);
@@ -342,6 +342,38 @@ app.delete('/deleteCar/:id', async (req, res) => {
     res.status(500).json({ message: 'Error deleting car', error: error.message });
   }
 });
+app.delete('/deleteUser/:id', async (req, res) => {
+  const { id } = req.params;
+
+  // Validate that the id is provided
+  if (!id) {
+    return res.status(400).json({ message: 'User ID is required' });
+  }
+
+  try {
+    // Check if the user exists
+    const user = await prisma.user.findUnique({
+      where: { id: id },
+    });
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Delete the user
+    await prisma.user.delete({
+      where: { id: id },
+    });
+
+    // Respond with success
+    res.status(200).json({ message: 'User deleted successfully' });
+
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    res.status(500).json({ message: 'Error deleting user', error: error.message });
+  }
+});
+
 app.get('/getCar/:id', async (req, res) => {
   const { id } = req.params;
 
