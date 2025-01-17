@@ -252,8 +252,8 @@ app.post('/addCar', async (req, res) => {
         fuelType,
         discNumber,
         licensePlate,
-        madeYear: parseInt(madeYear, 10), // Ensure the year is stored as an integer
-        kilometers: parseInt(kilometers, 10), // Ensure kilometers are stored as an integer
+        madeYear,
+        kilometers,
         estmara,
         userId,
       },
@@ -269,7 +269,6 @@ app.post('/addCar', async (req, res) => {
     res.status(500).json({ message: 'Error adding car.', error: error.message });
   }
 });
-
 app.post("/fix", async (req, res) => {
   const { name, kilometers, lastFixDate, fix, rememberMe, morfaqat, carId } = req.body;
 
