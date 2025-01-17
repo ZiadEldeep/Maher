@@ -93,7 +93,7 @@
     ]
   },
   "Acura": {
-    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/acura.jpg",
+    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/acuraN.png",
     "models": [
       {
         "model": "MDX",
@@ -178,7 +178,7 @@
     ]
   },
   "Alfa Romeo": {
-    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/alfa-romeo.jpg",
+    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/alfa-romeoN.png",
     "models": [
       {
         "model": "Giulia",
@@ -568,7 +568,7 @@
     ]
   },
   "Chevrolet": {
-    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/chevrolet.jpg",
+    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/chevroletN.png",
     "models": [
       {
         "model": "Blazer",
@@ -877,7 +877,7 @@
     ]
   },
   "Kia": {
-    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/kia.jpg",
+    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/kiaN.png",
     "models": [
       {
         "model": "Sorento",
@@ -922,7 +922,7 @@
     ]
   },
   "Lexus": {
-    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/lexus.jpg",
+    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/lexusN.png",
     "models": [
       {
         "model": "RX",
@@ -1057,7 +1057,7 @@
     ]
   },
   "Rolls-Royce": {
-    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/rolls-royce.jpg",
+    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/rolls-royceN.png",
     "models": [
       {
         "model": "Phantom",
@@ -1192,7 +1192,7 @@
     ]
   },
   "Mercedes-Benz": {
-    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/mercedes-benz.jpg",
+    "image": "https://raw.githubusercontent.com/ZiadEldeep/Maher/refs/heads/main/imgs/mercedes-benzN.png",
     "models": [
       {
         "model": "A-Class",
