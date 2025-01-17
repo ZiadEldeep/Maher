@@ -8,8 +8,11 @@ const crypto = require('crypto');
 const app = express();
 const dataFilePath = path.join(__dirname, "cars.json");
 app.use(express.json());
-app.use(cors());
-const readJSONFile = () => {
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));const readJSONFile = () => {
   try {
     const data = fs.readFileSync(dataFilePath, "utf-8");
     return JSON.parse(data);
