@@ -133,7 +133,7 @@ app.post("/registerApi", async (req, res) => {
     await transporter.sendMail(mailOptions);
 
     // Step 5: Respond with success message
-    res.status(201).json({ message: "success", user });
+    res.status(201).json({ message: "success", verificationCode,phone });
 
   } catch (error) {
     if (error.code === 'EAUTH') {
@@ -310,7 +310,6 @@ app.post('/addCar', async (req, res) => {
     res.status(500).json({ message: 'Error adding car and fix', error: error.message });
   }
 });
-
 app.post("/fix", async (req, res) => {
   const { name, kilometers, lastFixDate, fix, rememberMe, morfaqat, carId } = req.body;
 
