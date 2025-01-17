@@ -530,6 +530,25 @@ app.get("/getFixById/:fixId", async (req, res) => {
     res.status(500).json({ message: "Error fetching fix by ID", error: error.message });
   }
 });
+app.get("/show-cars", async (req, res) => {
+  try {
+    // Fetch all cars from the database
+    const cars = await prisma.car.findMany();
+
+    // Check if cars array is empty
+    if (cars.length === 0) {
+      return res.status(404).json({ message: "No cars found" });
+    }
+
+    // Return success response with cars
+    res.json({ message: "success", cars });
+  } catch (error) {
+    // Log and return error response
+    console.error("Error fetching cars:", error);
+    res.status(500).json({ message: "Error fetching cars", error });
+  }
+});
+
 const PORT = 3999;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
