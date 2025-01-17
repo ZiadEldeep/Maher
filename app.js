@@ -215,9 +215,38 @@ app.post("/login", async (req, res) => {
   }
 });
 app.post('/addCar', async (req, res) => {
-  const { userId, brand, model, color, fuelType, discNumber, licensePlate, madeYear, kilometers, estmara, fixDescription } = req.body;
+  const {
+    userId,
+    brand,
+    model,
+    color,
+    fuelType,
+    discNumber,
+    licensePlate,
+    madeYear,
+    kilometers,
+    estmara,
+    fixDescription,
+    fixDate, // Include fix date in the request
+    morfaqat, // Include additional fix-related data if needed
+  } = req.body;
 
   try {
+    // Validate required fields
+    if (!userId || !brand || !model || !color || !fuelType || !licensePlate || !madeYear || !kilometers || !estmara) {
+      return res.status(400).json({ message: 'All car fields are required' });
+    }
+
+    if (!fixDescription || !fixDate) {
+      return res.status(400).json({ message: 'Fix description and date are required' });
+    }
+
+    // Parse and validate fixDate
+    const parsedFixDate = new Date(fixDate);
+    if (isNaN(parsedFixDate.getTime())) {
+      return res.status(400).json({ message: 'Invalid fixDate provided' });
+    }
+
     // Check if the user exists
     const user = await prisma.user.findUnique({
       where: { id: userId },
@@ -244,40 +273,53 @@ app.post('/addCar', async (req, res) => {
     });
 
     // Create a fix record for the new car
-    // const newFix = await prisma.fix.create({
-    //   data: {
-    //     description: fixDescription,  // Description of the fix
-    //     date: new Date(),  // Date of the fix
-    //     carId: newCar.id,  // Linking fix to the car by carId
-    //   },
-    // });
+    const newFix = await prisma.fix.create({
+      data: {
+        name: fixDescription, // Description of the fix
+        lastFixDate: parsedFixDate, // Validated date
+        kilometers, // Relevant data from the car
+        fix: fixDescription, // Correctly assign the `fix` field with a string
+        rememberMe: new Date(), // Set the rememberMe field as needed
+        morfaqat, // Additional fix data if provided
+        carId: newCar.id, // Link the fix to the car
+      },
+    });
+    
 
-    // Return the updated user data with the associated cars (including the new car)
+    // Fetch the updated user data with associated cars and fixes
     const updatedUser = await prisma.user.findUnique({
       where: { id: userId },
       include: {
-        cars: true, // Include related cars data
+        cars: {
+          include: {
+            fixes: true, // Include related fixes for each car
+          },
+        },
       },
     });
 
+    // Respond with the car, fix, and updated user data
     res.status(201).json({
       message: 'Car and fix added successfully',
       car: newCar,
-      // fix: newFix,
-      user: updatedUser, // Include the updated user with car IDs
+      fix: newFix,
+      user: updatedUser,
     });
   } catch (error) {
     console.error('Error adding car and fix:', error);
     res.status(500).json({ message: 'Error adding car and fix', error: error.message });
   }
 });
+
 app.post("/fix", async (req, res) => {
-  const { kilometers, lastFixDate, fix, rememberMe, morfaqat, carId } = req.body;
+  const { name, kilometers, lastFixDate, fix, rememberMe, morfaqat, carId } = req.body;
 
   try {
     // Basic validation for required fields
-    if (!kilometers || !lastFixDate || !fix || !morfaqat || !carId) {
-      return res.status(400).json({ message: "All fields except 'rememberMe' are required" });
+    if (!name || !kilometers || !lastFixDate || !fix || !morfaqat || !carId) {
+      return res
+        .status(400)
+        .json({ message: "All fields except 'rememberMe' are required" });
     }
 
     // Check if the car exists
@@ -292,10 +334,11 @@ app.post("/fix", async (req, res) => {
     // Save fix data to the database
     const fixEntry = await prisma.fix.create({
       data: {
+        name, // Include the name field
         kilometers,
         lastFixDate: new Date(lastFixDate),
         fix,
-        rememberMe, // Optional field
+        rememberMe: rememberMe ? new Date(rememberMe) : null, // Optional field
         morfaqat,
         carId, // Associate the fix with the car
       },
@@ -474,7 +517,37 @@ app.get('/getCarsByUser/:userId', async (req, res) => {
     res.status(500).json({ message: 'Error retrieving cars data', error: error.message });
   }
 });
+app.get("/getFix", async (req, res) => {
+  const { carId, name } = req.query;
 
+  try {
+    // Validate input
+    if (!carId && !name) {
+      return res.status(400).json({ message: "Please provide carId or name." });
+    }
+
+    // Fetch fixes based on carId or name
+    const fixes = await prisma.fix.findMany({
+      where: {
+        OR: [
+          carId ? { carId } : null, // If carId exists, use it in the query
+          name ? { name } : null,  // If name exists, use it in the query
+        ].filter(Boolean), // Filter out null conditions
+      },
+    });
+
+    // Check if fixes were found
+    if (fixes.length === 0) {
+      return res.status(404).json({ message: "No fixes found for the given criteria." });
+    }
+
+    // Respond with the fixes
+    res.status(200).json({ message: "Fixes retrieved successfully", fixes });
+  } catch (error) {
+    console.error("Error fetching fixes:", error);
+    res.status(500).json({ message: "Error fetching fixes", error: error.message });
+  }
+});
 const PORT = 3999;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

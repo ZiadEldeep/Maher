@@ -38,6 +38,7 @@ model User {
 }
 model Car {
   id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  image         String  @default("https://example.com/default-image.jpg")
   brand         String
   model         String
   color         String
@@ -53,15 +54,17 @@ model Car {
 }
 model Fix {
   id            String   @id @map("_id") @default(auto()) @db.ObjectId
+  name          String
   kilometers    String
   lastFixDate   DateTime
-  fix           String
-  rememberMe    String
+  fix           String  // New field added for the fix description
+  rememberMe    DateTime
   morfaqat      String
   createdAt     DateTime @default(now())
   carId         String   @db.ObjectId
   car           Car      @relation(fields: [carId], references: [id]) 
 }
+
 model Address {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   address   String
