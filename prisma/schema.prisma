@@ -60,6 +60,7 @@ model Fix {
   fix           String  // New field added for the fix description
   rememberMe    DateTime
   morfaqat      String
+  isRemember      Boolean @default(true) 
   createdAt     DateTime @default(now())
   carId         String   @db.ObjectId
   car           Car      @relation(fields: [carId], references: [id]) 
