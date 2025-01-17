@@ -78,7 +78,7 @@ app.get("/show", async (req, res) => {
     }
 
     // Return success response with users
-    res.json({ message: "success", users,userid });
+    res.json({ message: "success", users });
   } catch (error) {
     // Log and return error response
     console.error("Error fetching users:", error);
