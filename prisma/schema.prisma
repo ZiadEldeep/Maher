@@ -38,7 +38,7 @@ model User {
 }
 model Car {
   id            String  @id @default(auto()) @map("_id") @db.ObjectId
-  image         String  @default("https://example.com/default-image.jpg")
+  image         String  
   brand         String
   model         String
   color         String

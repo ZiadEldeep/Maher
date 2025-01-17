@@ -213,6 +213,7 @@ app.post("/login", async (req, res) => {
 app.post('/addCar', async (req, res) => {
   const {
     userId,
+    image,
     brand,
     model,
     color,
@@ -226,7 +227,7 @@ app.post('/addCar', async (req, res) => {
 
   try {
     // Validate required fields
-    if (!userId || !brand || !model || !color || !fuelType || !licensePlate || !madeYear || !kilometers) {
+    if (!userId || !brand || !model || !color || !fuelType || !licensePlate || !madeYear || !kilometers || !image) {
       return res.status(400).json({ message: 'All fields are required.' });
     }
 
@@ -244,6 +245,7 @@ app.post('/addCar', async (req, res) => {
       data: {
         brand,
         model,
+        image,
         color,
         fuelType,
         discNumber,
