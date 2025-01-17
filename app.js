@@ -532,23 +532,46 @@ app.get("/getFixById/:fixId", async (req, res) => {
 });
 app.get("/show-cars", async (req, res) => {
   try {
-    // Fetch all cars from the database
-    const cars = await prisma.car.findMany();
+    // Fetch all cars along with the associated user's name
+    const cars = await prisma.car.findMany({
+      include: {
+        user: {
+          select: {
+            name: true, // Only select the user's name
+          },
+        },
+      },
+    });
 
     // Check if cars array is empty
     if (cars.length === 0) {
       return res.status(404).json({ message: "No cars found" });
     }
 
-    // Return success response with cars
-    res.json({ message: "success", cars });
+    // Map the cars array to include user name information
+    const carsWithUser = cars.map(car => ({
+      id: car.id,
+      image: car.image,
+      brand: car.brand,
+      model: car.model,
+      color: car.color,
+      fuelType: car.fuelType,
+      discNumber: car.discNumber,
+      licensePlate: car.licensePlate,
+      madeYear: car.madeYear,
+      kilometers: car.kilometers,
+      estmara: car.estmara,
+      userName: car.user.name, // Add the user's name to the car object
+    }));
+
+    // Return success response with cars and their user's name
+    res.json({ message: "success", cars: carsWithUser });
   } catch (error) {
     // Log and return error response
     console.error("Error fetching cars:", error);
     res.status(500).json({ message: "Error fetching cars", error });
   }
 });
-
 const PORT = 3999;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
