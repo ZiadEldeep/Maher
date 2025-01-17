@@ -129,7 +129,7 @@ app.post("/registerApi", async (req, res) => {
     await transporter.sendMail(mailOptions);
 
     // Step 5: Respond with success message
-    res.status(201).json({ message: "success",user:{ verificationCode:`${verificationCode}`,phone} });
+    res.status(201).json({ message: "success",user:{ verificationCode:`${verificationCode}`,phone,id:user.id} });
 
   } catch (error) {
     if (error.code === 'EAUTH') {
