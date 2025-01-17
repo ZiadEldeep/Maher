@@ -226,25 +226,12 @@ app.post('/addCar', async (req, res) => {
     madeYear,
     kilometers,
     estmara,
-    fixDescription,
-    fixDate, // Include fix date in the request
-    morfaqat, // Include additional fix-related data if needed
   } = req.body;
 
   try {
     // Validate required fields
-    if (!userId || !brand || !model || !color || !fuelType || !licensePlate || !madeYear || !kilometers || !estmara) {
-      return res.status(400).json({ message: 'All car fields are required' });
-    }
-
-    if (!fixDescription || !fixDate) {
-      return res.status(400).json({ message: 'Fix description and date are required' });
-    }
-
-    // Parse and validate fixDate
-    const parsedFixDate = new Date(fixDate);
-    if (isNaN(parsedFixDate.getTime())) {
-      return res.status(400).json({ message: 'Invalid fixDate provided' });
+    if (!userId || !brand || !model || !color || !fuelType || !licensePlate || !madeYear || !kilometers) {
+      return res.status(400).json({ message: 'All fields are required.' });
     }
 
     // Check if the user exists
@@ -253,7 +240,7 @@ app.post('/addCar', async (req, res) => {
     });
 
     if (!user) {
-      return res.status(404).json({ message: 'User not found' });
+      return res.status(404).json({ message: 'User not found.' });
     }
 
     // Create a new car and associate it with the user
@@ -265,51 +252,24 @@ app.post('/addCar', async (req, res) => {
         fuelType,
         discNumber,
         licensePlate,
-        madeYear,
-        kilometers,
+        madeYear: parseInt(madeYear, 10), // Ensure the year is stored as an integer
+        kilometers: parseInt(kilometers, 10), // Ensure kilometers are stored as an integer
         estmara,
         userId,
       },
     });
 
-    // Create a fix record for the new car
-    const newFix = await prisma.fix.create({
-      data: {
-        name: fixDescription, // Description of the fix
-        lastFixDate: parsedFixDate, // Validated date
-        kilometers, // Relevant data from the car
-        fix: fixDescription, // Correctly assign the `fix` field with a string
-        rememberMe: new Date(), // Set the rememberMe field as needed
-        morfaqat, // Additional fix data if provided
-        carId: newCar.id, // Link the fix to the car
-      },
-    });
-    
-
-    // Fetch the updated user data with associated cars and fixes
-    const updatedUser = await prisma.user.findUnique({
-      where: { id: userId },
-      include: {
-        cars: {
-          include: {
-            fixes: true, // Include related fixes for each car
-          },
-        },
-      },
-    });
-
-    // Respond with the car, fix, and updated user data
+    // Respond with the newly created car
     res.status(201).json({
-      message: 'Car and fix added successfully',
+      message: 'Car added successfully.',
       car: newCar,
-      fix: newFix,
-      user: updatedUser,
     });
   } catch (error) {
-    console.error('Error adding car and fix:', error);
-    res.status(500).json({ message: 'Error adding car and fix', error: error.message });
+    console.error('Error adding car:', error);
+    res.status(500).json({ message: 'Error adding car.', error: error.message });
   }
 });
+
 app.post("/fix", async (req, res) => {
   const { name, kilometers, lastFixDate, fix, rememberMe, morfaqat, carId } = req.body;
 
@@ -545,6 +505,34 @@ app.get("/getFix", async (req, res) => {
   } catch (error) {
     console.error("Error fetching fixes:", error);
     res.status(500).json({ message: "Error fetching fixes", error: error.message });
+  }
+});
+app.get("/getFixById/:fixId", async (req, res) => {
+  const { fixId } = req.params; // Extract the fixId from the route parameter
+
+  try {
+    // Validate input
+    if (!fixId) {
+      return res.status(400).json({ message: "Please provide a fixId." });
+    }
+
+    // Fetch the fix by fixId
+    const fix = await prisma.fix.findUnique({
+      where: {
+        id: fixId, // Ensure this matches your database schema
+      },
+    });
+
+    // Check if the fix was found
+    if (!fix) {
+      return res.status(404).json({ message: "Fix not found for the given ID." });
+    }
+
+    // Respond with the fix
+    res.status(200).json({ message: "Fix retrieved successfully", fix });
+  } catch (error) {
+    console.error("Error fetching fix by ID:", error);
+    res.status(500).json({ message: "Error fetching fix by ID", error: error.message });
   }
 });
 const PORT = 3999;
