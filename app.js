@@ -337,7 +337,7 @@ app.delete('/deleteCar/:id', async (req, res) => {
     });
 
     // Respond with success
-    res.status(200).json({ message: 'Car deleted successfully' });
+    res.status(201).json({ message: 'Car deleted successfully' });
 
   } catch (error) {
     console.error('Error deleting car:', error);
@@ -359,7 +359,7 @@ app.get('/getCar/:id', async (req, res) => {
     }
 
     // Respond with the car data
-    res.status(200).json({ message: 'Car retrieved successfully', car });
+    res.status(201).json({ message: 'Car retrieved successfully', car });
   } catch (error) {
     console.error('Error fetching car by ID:', error);
 
@@ -500,7 +500,7 @@ app.get("/getFix", async (req, res) => {
     }
 
     // Respond with the fixes
-    res.status(200).json({ message: "Fixes retrieved successfully", fixes });
+    res.status(201).json({ message: "Fixes retrieved successfully", fixes });
   } catch (error) {
     console.error("Error fetching fixes:", error);
     res.status(500).json({ message: "Error fetching fixes", error: error.message });
@@ -528,7 +528,7 @@ app.get("/getFixById/:fixId", async (req, res) => {
     }
 
     // Respond with the fix
-    res.status(200).json({ message: "Fix retrieved successfully", fix });
+    res.status(201).json({ message: "Fix retrieved successfully", fix });
   } catch (error) {
     console.error("Error fetching fix by ID:", error);
     res.status(500).json({ message: "Error fetching fix by ID", error: error.message });
