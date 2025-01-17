@@ -6,12 +6,9 @@ const path = require("path");
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
 const app = express();
-const twilio = require("twilio");
 const dataFilePath = path.join(__dirname, "cars.json");
 app.use(express.json());
 app.use(cors());
-
-// Utility functions to read and write the JSON file
 const readJSONFile = () => {
   try {
     const data = fs.readFileSync(dataFilePath, "utf-8");
@@ -21,7 +18,6 @@ const readJSONFile = () => {
     return [];
   }
 };
-
 const writeJSONFile = (data) => {
   try {
     fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2), "utf-8");
