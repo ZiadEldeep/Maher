@@ -376,7 +376,6 @@ app.delete('/deleteUser/:id', async (req, res) => {
     res.status(500).json({ message: 'Error deleting user', error: error.message });
   }
 });
-
 app.get('/getCar/:id', async (req, res) => {
   const { id } = req.params;
 
@@ -607,6 +606,42 @@ app.get("/show-cars", async (req, res) => {
     // Log and return error response
     console.error("Error fetching cars:", error);
     res.status(500).json({ message: "Error fetching cars", error });
+  }
+});
+app.put("/updateUser/:id", async (req, res) => {
+  const { id } = req.params; // Extract user ID from URL parameters
+  const { name, email, phone } = req.body; // Extract fields to update from the request body
+
+  try {
+    // Validate if the user exists
+    const user = await prisma.user.findUnique({
+      where: { id },
+    });
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Update the user data
+    const updatedUser = await prisma.user.update({
+      where: { id },
+      data: {
+        ...(name && { name }), // Only update if `name` is provided
+        ...(email && { email }), // Only update if `email` is provided
+        ...(phone && { phone }), // Only update if `phone` is provided
+      },
+    });
+
+    // Respond with the updated user data
+    res.status(200).json({ message: "User updated successfully", user: updatedUser });
+  } catch (error) {
+    console.error("Error updating user:", error);
+
+    if (error.message.includes("unique constraint")) {
+      res.status(400).json({ message: "Email or phone already exists", error });
+    } else {
+      res.status(500).json({ message: "Error updating user", error });
+    }
   }
 });
 const PORT = 3999;
