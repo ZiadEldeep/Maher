@@ -30,7 +30,7 @@ const writeJSONFile = (data) => {
 };
 app.get("/getCars", (req, res) => {
   const jsonData = readJSONFile();
-  res.status(201)({ message: "success", data: jsonData });
+  res.status(201).json({ message: "success", data: jsonData });
 });
 app.get("/getCars/:id", (req, res) => {
   const { id } = req.params;
@@ -47,7 +47,7 @@ app.get("/getCars/:id", (req, res) => {
   }
 
   if (foundCar) {
-    res.status(201)({ message: "success",brand: carBrand, data: foundCar });
+    res.status(201).json({ message: "success",brand: carBrand, data: foundCar });
   } else {
     res.status(404).json({ message: "Car not found" });
   }
@@ -65,7 +65,7 @@ app.get("/carBM", (req, res) => {
 
   // Return the found car or an error message
   if (foundCar) {
-    res.status(201)({ message: "success", brand: brand, data: foundCar });
+    res.status(201).json({ message: "success", brand: brand, data: foundCar });
   } else {
     res.status(404).json({ message: "Car not found" });
   }
@@ -81,7 +81,7 @@ app.get("/show", async (req, res) => {
     }
 
     // Return success response with users
-    res.status(201)({ message: "success", users });
+    res.status(201).json({ message: "success", users });
   } catch (error) {
     // Log and return error response
     console.error("Error fetching users:", error);
@@ -602,7 +602,7 @@ app.get("/show-cars", async (req, res) => {
     }));
 
     // Return success response with cars and their user's name
-    res.status(201)({ message: "success", cars: carsWithUser });
+    res.status(201).json({ message: "success", cars: carsWithUser });
   } catch (error) {
     // Log and return error response
     console.error("Error fetching cars:", error);
