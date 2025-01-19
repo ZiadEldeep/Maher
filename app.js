@@ -275,7 +275,7 @@ app.post("/fix", async (req, res) => {
 
   try {
     // Basic validation for required fields
-    if (!name || !kilometers || !lastFixDate || !fix || !morfaqat || !carId) {
+    if (!name || !kilometers || !lastFixDate || !fix  || !carId) {
       return res
         .status(400)
         .json({ message: "All fields except 'rememberMe' are required" });
