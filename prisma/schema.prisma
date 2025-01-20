@@ -59,7 +59,7 @@ model Fix {
   lastFixDate   DateTime
   fix           String  // New field added for the fix description
   rememberMe    DateTime
-  morfaqat      String
+  morfaqat      String?
   isRemember      Boolean @default(true) 
   createdAt     DateTime @default(now())
   carId         String   @db.ObjectId
